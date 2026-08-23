@@ -1,0 +1,29 @@
+# Maven build output
+target/
+*.jar
+*.war
+
+# Environment & credentials
+.env
+.env.*
+!.env.example
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Logs
+*.log
+logs/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
