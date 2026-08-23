@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: learning-path-recommender-test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: test
+    password: test
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+  flyway:
+    enabled: false
+
+app:
+  jwt:
+    secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    expiration-ms: 86400000
+  cors:
+    allowed-origins: http://localhost:5173
+  llm:
+    api-key: mock-key
+    model: gpt-4o-mini
+    base-url: https://api.openai.com/v1
+    timeout-seconds: 15
+  embedding:
+    api-key: mock-key
+    model: text-embedding-3-small
+    base-url: https://api.openai.com/v1
+    timeout-seconds: 15
+    dimension: 1536
+  recommendation:
+    max-milestones: 12

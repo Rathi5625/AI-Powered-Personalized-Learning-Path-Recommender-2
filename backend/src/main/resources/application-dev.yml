@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+logging:
+  level:
+    root: INFO
+    com.learningpath: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: DEBUG

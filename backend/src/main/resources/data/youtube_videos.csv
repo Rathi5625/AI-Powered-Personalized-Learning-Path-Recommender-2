@@ -1,0 +1,57 @@
+video_id,title,topic,level,channel,link
+YT_001,Full Stack Web Development Playlists,Fullstack,Beginner,freeCodeCamp.org,https://www.youtube.com/@freecodecamp
+YT_002,"Full Stack Project Tutorials (MERN, etc.)",Fullstack,Easy,Traversy Media,https://www.youtube.com/@TraversyMedia
+YT_003,Full Stack Course Playlists,Fullstack,Medium,The Net Ninja,https://www.youtube.com/@NetNinja
+YT_004,Full Stack Crash Courses,Fullstack,High,Academind,https://www.youtube.com/@academind
+YT_005,Frontend Development Tutorials,Frontend,Beginner,Traversy Media,https://www.youtube.com/@TraversyMedia
+YT_006,React / Vue / Frontend Framework Series,Frontend,Easy,The Net Ninja,https://www.youtube.com/@NetNinja
+YT_007,React Tutorials & Deep Dives,Frontend,Medium,Codevolution,https://www.youtube.com/@Codevolution
+YT_008,Modern Web Dev Explained Quickly,Frontend,High,Fireship,https://www.youtube.com/@Fireship
+YT_009,Frontend Concepts Explained,Frontend,Medium,Web Dev Simplified,https://www.youtube.com/@WebDevSimplified
+YT_010,Node.js & Backend Tutorials,Backend,Beginner,Traversy Media,https://www.youtube.com/@TraversyMedia
+YT_011,Backend Development Playlists,Backend,Easy,The Net Ninja,https://www.youtube.com/@NetNinja
+YT_012,Backend Engineering & Databases Deep Dives,Backend,Medium,Hussein Nasser,https://www.youtube.com/@hnasr
+YT_013,Backend Crash Courses,Backend,High,Academind,https://www.youtube.com/@academind
+YT_014,Algorithms Playlist (Full Course),DSA,Beginner,Abdul Bari,https://www.youtube.com/@abdul_bari
+YT_015,DSA Sheet & Structured Playlists,DSA,Easy,take U forward (Striver),https://www.youtube.com/@takeUforward
+YT_016,Coding Interview & DSA Solutions,DSA,Medium,NeetCode,https://www.youtube.com/@NeetCode
+YT_017,DSA Concepts Explained (Hindi/English),DSA,Medium,Kunal Kushwaha,https://www.youtube.com/@KunalKushwaha
+YT_018,Computer Science Fundamentals & DSA,DSA,High,Gate Smashers,https://www.youtube.com/@GateSmashers
+YT_019,DSA in Java/C++ Tutorials,DSA,Beginner,CodeWithHarry,https://www.youtube.com/@CodeWithHarry
+YT_020,System Design Interview Playlist,System Design,Beginner,Gaurav Sen,https://www.youtube.com/@gkcs
+YT_021,System Design Explained Visually,System Design,Easy,ByteByteGo,https://www.youtube.com/@ByteByteGo
+YT_022,Backend & Distributed Systems Concepts,System Design,Medium,Hussein Nasser,https://www.youtube.com/@hnasr
+YT_023,System Design Crash Courses,System Design,High,Gate Smashers,https://www.youtube.com/@GateSmashers
+YT_024,Java Full Course for Beginners,Java,Beginner,freeCodeCamp.org,https://www.youtube.com/@freecodecamp
+YT_025,Java Tutorials (Aliens Welcome),Java,Easy,Telusko,https://www.youtube.com/@Telusko
+YT_026,Java & Spring Boot Tutorials,Java,Medium,Java Brains,https://www.youtube.com/@JavaBrains
+YT_027,Spring Boot & Backend Java Projects,Java,Medium,Amigoscode,https://www.youtube.com/@amigoscode
+YT_028,Java Concepts Explained,Java,High,Kunal Kushwaha,https://www.youtube.com/@KunalKushwaha
+YT_029,Python Full Course for Beginners,Python,Beginner,freeCodeCamp.org,https://www.youtube.com/@freecodecamp
+YT_030,Python Tutorials & OOP Series,Python,Easy,Corey Schafer,https://www.youtube.com/@coreyms
+YT_031,Python Programming & Data Science,Python,Medium,sentdex,https://www.youtube.com/@sentdex
+YT_032,Python Projects & Concepts,Python,Medium,Tech With Tim,https://www.youtube.com/@TechWithTim
+YT_033,Python Design Patterns & Best Practices,Python,High,ArjanCodes,https://www.youtube.com/@ArjanCodes
+YT_034,Advanced Python Internals,Python,High,mCoding,https://www.youtube.com/@mCoding
+YT_035,C++ Full Course for Beginners,C++,Beginner,freeCodeCamp.org,https://www.youtube.com/@freecodecamp
+YT_036,C++ Series (Game Engine Dev),C++,Medium,The Cherno,https://www.youtube.com/@TheCherno
+YT_037,C++ & DSA Tutorials,C++,Easy,CodeWithHarry,https://www.youtube.com/@CodeWithHarry
+YT_038,Competitive Programming in C++,C++,High,Abdul Bari,https://www.youtube.com/@abdul_bari
+YT_039,HTML Crash Course,HTML,Beginner,Traversy Media,https://www.youtube.com/@TraversyMedia
+YT_040,HTML Full Tutorial,HTML,Easy,freeCodeCamp.org,https://www.youtube.com/@freecodecamp
+YT_041,HTML & Semantic Markup Explained,HTML,Medium,Web Dev Simplified,https://www.youtube.com/@WebDevSimplified
+YT_042,HTML Course (Hindi/English),HTML,Easy,CodeWithHarry,https://www.youtube.com/@CodeWithHarry
+YT_043,CSS Crash Course,CSS,Beginner,Traversy Media,https://www.youtube.com/@TraversyMedia
+YT_044,CSS Full Course & Flexbox/Grid,CSS,Easy,Kevin Powell,https://www.youtube.com/@KevinPowell
+YT_045,CSS Tips and Deep Dives,CSS,Medium,Kevin Powell,https://www.youtube.com/@KevinPowell
+YT_046,CSS Course (Hindi/English),CSS,Medium,CodeWithHarry,https://www.youtube.com/@CodeWithHarry
+YT_047,JavaScript Crash Course,JavaScript,Beginner,Traversy Media,https://www.youtube.com/@TraversyMedia
+YT_048,JavaScript Full Course,JavaScript,Easy,freeCodeCamp.org,https://www.youtube.com/@freecodecamp
+YT_049,Modern JavaScript Concepts,JavaScript,Medium,Web Dev Simplified,https://www.youtube.com/@WebDevSimplified
+YT_050,JavaScript Explained Quickly,JavaScript,High,Fireship,https://www.youtube.com/@Fireship
+YT_051,JavaScript Course (Hindi/English),JavaScript,Easy,CodeWithHarry,https://www.youtube.com/@CodeWithHarry
+YT_052,CS50: Introduction to Computer Science,Computer Science Foundations,Beginner,CS50 (Harvard),https://www.youtube.com/@cs50
+YT_053,MIT 6.006 Introduction to Algorithms,Computer Science Foundations,Medium,MIT OpenCourseWare,https://www.youtube.com/@mitocw
+YT_054,Full Stack Development Tutorials (India-focused),Fullstack,Beginner,Apna College,https://www.youtube.com/@ApnaCollege
+YT_055,Web Dev Bootcamp Style Tutorials,Fullstack,Easy,Colt Steele,https://www.youtube.com/@ColtSteele
+YT_056,Coding Tutorials Across Stacks,Fullstack,Easy,Dave Gray,https://www.youtube.com/@DaveGrayTeachesCode

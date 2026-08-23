@@ -1,0 +1,49 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+FS_01_01,roadmap.sh: Full Stack Roadmap,Fullstack Roadmap,Beginner,3,roadmap.sh,https://roadmap.sh/full-stack
+FS_01_02,The Odin Project,Fullstack Roadmap,Easy,6,The Odin Project,https://www.theodinproject.com/
+FS_01_03,Full Stack Open,Fullstack Roadmap,Medium,10,University of Helsinki,https://fullstackopen.com/en/
+FS_01_04,freeCodeCamp: Full Stack Curriculum,Fullstack Roadmap,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/
+FS_02_01,MDN: Getting started with the Web,HTML/CSS/JS Foundations,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website
+FS_02_02,freeCodeCamp: Responsive Web Design,HTML/CSS/JS Foundations,Easy,6,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+FS_02_03,javascript.info,HTML/CSS/JS Foundations,Medium,10,javascript.info,https://javascript.info/
+FS_02_04,web.dev: Learn,HTML/CSS/JS Foundations,High,15,web.dev,https://web.dev/learn
+FS_03_01,React Learn,Frontend Framework (React),Beginner,3,React,https://react.dev/learn
+FS_03_02,Full Stack Open Part 1: React,Frontend Framework (React),Easy,6,University of Helsinki,https://fullstackopen.com/en/part1
+FS_03_03,freeCodeCamp: Front End Development Libraries,Frontend Framework (React),Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/front-end-development-libraries/
+FS_03_04,Next.js Learn,Frontend Framework (React),High,15,Next.js,https://nextjs.org/learn
+FS_04_01,Node.js Learn,Backend & APIs (Node/Express),Beginner,3,Node.js,https://nodejs.org/en/learn
+FS_04_02,Express: Routing,Backend & APIs (Node/Express),Easy,6,Express,https://expressjs.com/en/guide/routing.html
+FS_04_03,Full Stack Open Part 3: Node/Express,Backend & APIs (Node/Express),Medium,10,University of Helsinki,https://fullstackopen.com/en/part3
+FS_04_04,freeCodeCamp: Back End Development and APIs,Backend & APIs (Node/Express),High,15,freeCodeCamp,https://www.freecodecamp.org/learn/back-end-development-and-apis/
+FS_05_01,SQLBolt,Databases (SQL & NoSQL),Beginner,3,SQLBolt,https://sqlbolt.com/
+FS_05_02,PostgreSQL Tutorial,Databases (SQL & NoSQL),Easy,6,PostgreSQL,https://www.postgresql.org/docs/current/tutorial.html
+FS_05_03,MongoDB University,Databases (SQL & NoSQL),Medium,10,MongoDB,https://learn.mongodb.com/
+FS_05_04,Full Stack Open Part 4: Testing/Structure,Databases (SQL & NoSQL),High,15,University of Helsinki,https://fullstackopen.com/en/part4
+FS_06_01,MDN: HTTP authentication,Authentication & Security,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+FS_06_02,OWASP Authentication Cheat Sheet,Authentication & Security,Easy,6,OWASP,https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+FS_06_03,Full Stack Open: Token Authentication,Authentication & Security,Medium,10,University of Helsinki,https://fullstackopen.com/en/part4/token_authentication
+FS_06_04,Auth0 Learn,Authentication & Security,High,15,Auth0,https://auth0.com/docs/get-started
+FS_07_01,MDN: Testing,Testing & Debugging,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing
+FS_07_02,Jest Getting Started,Testing & Debugging,Easy,6,Jest,https://jestjs.io/docs/getting-started
+FS_07_03,Vitest Guide,Testing & Debugging,Medium,10,Vitest,https://vitest.dev/guide/
+FS_07_04,Playwright Introduction,Testing & Debugging,High,15,Playwright,https://playwright.dev/docs/intro
+FS_08_01,Pro Git Book,Version Control (Git & GitHub),Beginner,3,Git,https://git-scm.com/book/en/v2
+FS_08_02,GitHub Skills: Introduction to GitHub,Version Control (Git & GitHub),Easy,6,GitHub,https://skills.github.com/
+FS_08_03,GitHub Docs: Git guides,Version Control (Git & GitHub),Medium,10,GitHub,https://docs.github.com/en/get-started/git-basics
+FS_08_04,Atlassian Git tutorials,Version Control (Git & GitHub),High,15,Atlassian,https://www.atlassian.com/git/tutorials
+FS_09_01,Vercel: Getting Started,DevOps & Deployment,Beginner,3,Vercel,https://vercel.com/docs/getting-started-with-vercel
+FS_09_02,Netlify: Get started,DevOps & Deployment,Easy,6,Netlify,https://docs.netlify.com/get-started/
+FS_09_03,Docker: Get Started,DevOps & Deployment,Medium,10,Docker,https://docs.docker.com/get-started/
+FS_09_04,GitHub Actions Quickstart,DevOps & Deployment,High,15,GitHub,https://docs.github.com/en/actions/quickstart
+FS_10_01,Full Stack Open Part 5: Testing React apps,MERN/MEAN Stack Projects,Beginner,3,University of Helsinki,https://fullstackopen.com/en/part5
+FS_10_02,MDN: Express/Node tutorial,MERN/MEAN Stack Projects,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs
+FS_10_03,freeCodeCamp: Back End Development and APIs,MERN/MEAN Stack Projects,Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/back-end-development-and-apis/
+FS_10_04,The Odin Project: Full Stack JavaScript,MERN/MEAN Stack Projects,High,15,The Odin Project,https://www.theodinproject.com/paths/full-stack-javascript
+FS_11_01,roadmap.sh: System Design,System Design for Fullstack Devs,Beginner,3,roadmap.sh,https://roadmap.sh/system-design
+FS_11_02,GeeksforGeeks: System Design Tutorial,System Design for Fullstack Devs,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/system-design/system-design-tutorial/
+FS_11_03,System Design Primer (GitHub),System Design for Fullstack Devs,Medium,10,GitHub,https://github.com/donnemartin/system-design-primer
+FS_11_04,Educative: Grokking the System Design Interview,System Design for Fullstack Devs,High,15,Educative,https://www.educative.io/courses/grokking-the-system-design-interview
+FS_12_01,LeetCode Practice Platform,Fullstack Interview Prep,Beginner,3,LeetCode,https://leetcode.com/
+FS_12_02,GeeksforGeeks Interview Questions,Fullstack Interview Prep,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/interview-preparation/
+FS_12_03,HackerRank Practice,Fullstack Interview Prep,Medium,10,HackerRank,https://www.hackerrank.com/
+FS_12_04,roadmap.sh Interview Guides,Fullstack Interview Prep,High,15,roadmap.sh,https://roadmap.sh/guides

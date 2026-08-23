@@ -1,0 +1,65 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+DSA_01_01,GeeksforGeeks: Array Data Structure,Arrays & Strings,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/array-data-structure/
+DSA_01_02,LeetCode Explore: Array and String,Arrays & Strings,Easy,6,LeetCode,https://leetcode.com/explore/learn/card/array-and-string/
+DSA_01_03,freeCodeCamp: Coding Interview Prep,Arrays & Strings,Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/coding-interview-prep/
+DSA_01_04,HackerRank: Data Structures - Arrays,Arrays & Strings,High,15,HackerRank,https://www.hackerrank.com/domains/data-structures
+DSA_02_01,GeeksforGeeks: Linked List,Linked List,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/data-structures/linked-list/
+DSA_02_02,LeetCode Explore: Linked List,Linked List,Easy,6,LeetCode,https://leetcode.com/explore/learn/card/linked-list/
+DSA_02_03,roadmap.sh: Data Structures & Algorithms,Linked List,Medium,10,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_02_04,VisuAlgo: Linked List,Linked List,High,15,VisuAlgo,https://visualgo.net/en/list
+DSA_03_01,GeeksforGeeks: Stack Data Structure,Stacks & Queues,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/stack-data-structure/
+DSA_03_02,GeeksforGeeks: Queue Data Structure,Stacks & Queues,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/queue-data-structure/
+DSA_03_03,LeetCode Explore: Queue & Stack,Stacks & Queues,Medium,10,LeetCode,https://leetcode.com/explore/learn/card/queue-stack/
+DSA_03_04,VisuAlgo: Stack/Queue,Stacks & Queues,High,15,VisuAlgo,https://visualgo.net/en/list
+DSA_04_01,GeeksforGeeks: Recursion,Recursion & Backtracking,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/recursion/
+DSA_04_02,GeeksforGeeks: Backtracking Algorithms,Recursion & Backtracking,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/backtracking-algorithms/
+DSA_04_03,LeetCode Explore: Recursion I,Recursion & Backtracking,Medium,10,LeetCode,https://leetcode.com/explore/learn/card/recursion-i/
+DSA_04_04,roadmap.sh: Data Structures & Algorithms,Recursion & Backtracking,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_05_01,GeeksforGeeks: Binary Tree,Trees (Binary Tree/BST),Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/binary-tree-data-structure/
+DSA_05_02,GeeksforGeeks: Binary Search Tree,Trees (Binary Tree/BST),Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/binary-search-tree-data-structure/
+DSA_05_03,LeetCode Explore: Binary Tree,Trees (Binary Tree/BST),Medium,10,LeetCode,https://leetcode.com/explore/learn/card/data-structure-tree/
+DSA_05_04,VisuAlgo: BST,Trees (Binary Tree/BST),High,15,VisuAlgo,https://visualgo.net/en/bst
+DSA_06_01,GeeksforGeeks: Heap Data Structure,Heaps & Priority Queue,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/heap-data-structure/
+DSA_06_02,LeetCode Explore: Heap,Heaps & Priority Queue,Easy,6,LeetCode,https://leetcode.com/explore/learn/card/heap/
+DSA_06_03,VisuAlgo: Heap,Heaps & Priority Queue,Medium,10,VisuAlgo,https://visualgo.net/en/heap
+DSA_06_04,roadmap.sh: Data Structures & Algorithms,Heaps & Priority Queue,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_07_01,GeeksforGeeks: Graph Data Structure,Graphs,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
+DSA_07_02,LeetCode Explore: Graph,Graphs,Easy,6,LeetCode,https://leetcode.com/explore/learn/card/graph/
+DSA_07_03,VisuAlgo: Graph Data Structures,Graphs,Medium,10,VisuAlgo,https://visualgo.net/en/graphds
+DSA_07_04,roadmap.sh: Data Structures & Algorithms,Graphs,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_08_01,GeeksforGeeks: Sorting Algorithms,Sorting Algorithms,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/sorting-algorithms/
+DSA_08_02,VisuAlgo: Sorting,Sorting Algorithms,Easy,6,VisuAlgo,https://visualgo.net/en/sorting
+DSA_08_03,LeetCode Explore: Sorting,Sorting Algorithms,Medium,10,LeetCode,https://leetcode.com/explore/learn/card/sorting/
+DSA_08_04,roadmap.sh: Data Structures & Algorithms,Sorting Algorithms,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_09_01,GeeksforGeeks: Searching Algorithms,Searching Algorithms,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/searching-algorithms/
+DSA_09_02,GeeksforGeeks: Binary Search,Searching Algorithms,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/binary-search/
+DSA_09_03,LeetCode Explore: Binary Search,Searching Algorithms,Medium,10,LeetCode,https://leetcode.com/explore/learn/card/binary-search/
+DSA_09_04,roadmap.sh: Data Structures & Algorithms,Searching Algorithms,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_10_01,GeeksforGeeks: Dynamic Programming,Dynamic Programming,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/dynamic-programming/
+DSA_10_02,LeetCode Explore: Dynamic Programming,Dynamic Programming,Easy,6,LeetCode,https://leetcode.com/explore/learn/card/dynamic-programming/
+DSA_10_03,NeetCode,Dynamic Programming,Medium,10,NeetCode,https://neetcode.io/
+DSA_10_04,roadmap.sh: Data Structures & Algorithms,Dynamic Programming,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_11_01,GeeksforGeeks: Greedy Algorithms,Greedy Algorithms,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/greedy-algorithms/
+DSA_11_02,LeetCode: Greedy tag,Greedy Algorithms,Easy,6,LeetCode,https://leetcode.com/tag/greedy/
+DSA_11_03,roadmap.sh: Data Structures & Algorithms,Greedy Algorithms,Medium,10,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_11_04,freeCodeCamp: Coding Interview Prep,Greedy Algorithms,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/coding-interview-prep/
+DSA_12_01,GeeksforGeeks: Bitwise Algorithms,Bit Manipulation,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/bitwise-algorithms/
+DSA_12_02,LeetCode: Bit Manipulation tag,Bit Manipulation,Easy,6,LeetCode,https://leetcode.com/tag/bit-manipulation/
+DSA_12_03,roadmap.sh: Data Structures & Algorithms,Bit Manipulation,Medium,10,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_12_04,HackerRank: Bit Manipulation,Bit Manipulation,High,15,HackerRank,https://www.hackerrank.com/domains/algorithms
+DSA_13_01,GeeksforGeeks: Window Sliding Technique,Sliding Window & Two Pointers,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/window-sliding-technique/
+DSA_13_02,GeeksforGeeks: Two Pointer Technique,Sliding Window & Two Pointers,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/two-pointers-technique/
+DSA_13_03,LeetCode Explore: Array and String,Sliding Window & Two Pointers,Medium,10,LeetCode,https://leetcode.com/explore/learn/card/array-and-string/
+DSA_13_04,roadmap.sh: Data Structures & Algorithms,Sliding Window & Two Pointers,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_14_01,GeeksforGeeks: Trie Insert and Search,Tries,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/trie-insert-and-search/
+DSA_14_02,LeetCode Explore: Trie,Tries,Easy,6,LeetCode,https://leetcode.com/explore/learn/card/trie/
+DSA_14_03,VisuAlgo: Trie,Tries,Medium,10,VisuAlgo,https://visualgo.net/en/trie
+DSA_14_04,roadmap.sh: Data Structures & Algorithms,Tries,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_15_01,GeeksforGeeks: Dijkstra's Algorithm,Advanced Graph Algorithms,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
+DSA_15_02,GeeksforGeeks: Minimum Spanning Tree,Advanced Graph Algorithms,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/minimum-spanning-tree/
+DSA_15_03,VisuAlgo: Graph Data Structures,Advanced Graph Algorithms,Medium,10,VisuAlgo,https://visualgo.net/en/graphds
+DSA_15_04,roadmap.sh: Data Structures & Algorithms,Advanced Graph Algorithms,High,15,roadmap.sh,https://roadmap.sh/datastructures-and-algorithms
+DSA_16_01,LeetCode,DSA Practice Platforms & Interview Prep,Beginner,3,LeetCode,https://leetcode.com/
+DSA_16_02,HackerRank,DSA Practice Platforms & Interview Prep,Easy,6,HackerRank,https://www.hackerrank.com/
+DSA_16_03,Codeforces,DSA Practice Platforms & Interview Prep,Medium,10,Codeforces,https://codeforces.com/
+DSA_16_04,NeetCode: Roadmap,DSA Practice Platforms & Interview Prep,High,15,NeetCode,https://neetcode.io/roadmap

@@ -1,0 +1,133 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+BE_01_01,MDN: Server-side website programming,Internet Fundamentals,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side
+BE_01_02,Full Stack Open,Internet Fundamentals,Easy,6,University of Helsinki,https://fullstackopen.com/en/
+BE_01_03,roadmap.sh Backend,Internet Fundamentals,Medium,10,roadmap.sh,https://roadmap.sh/backend
+BE_01_04,freeCodeCamp: Back End Development,Internet Fundamentals,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/back-end-development-and-apis/
+BE_02_01,MDN: Server-side website programming,Introduction to Backend Development,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side
+BE_02_02,Full Stack Open,Introduction to Backend Development,Easy,6,University of Helsinki,https://fullstackopen.com/en/
+BE_02_03,roadmap.sh Backend,Introduction to Backend Development,Medium,10,roadmap.sh,https://roadmap.sh/backend
+BE_02_04,freeCodeCamp: Back End Development,Introduction to Backend Development,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/back-end-development-and-apis/
+BE_03_01,MDN: Structuring content with HTML,HTML Fundamentals,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content
+BE_03_02,MDN: Introduction to HTML,HTML Fundamentals,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content
+BE_03_03,freeCodeCamp: Responsive Web Design,HTML Fundamentals,Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+BE_03_04,web.dev: Learn HTML,HTML Fundamentals,High,15,web.dev,https://web.dev/learn/html/
+BE_04_01,MDN: CSS styling basics,CSS Fundamentals,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics
+BE_04_02,MDN: CSS layout,CSS Fundamentals,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout
+BE_04_03,web.dev: Learn CSS,CSS Fundamentals,Medium,10,web.dev,https://web.dev/learn/css/
+BE_04_04,freeCodeCamp: Responsive Web Design,CSS Fundamentals,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+BE_05_01,MDN: JavaScript Guide,JavaScript Foundations,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+BE_05_02,MDN: Dynamic scripting with JavaScript,JavaScript Foundations,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting
+BE_05_03,javascript.info,JavaScript Foundations,Medium,10,javascript.info,https://javascript.info/
+BE_05_04,freeCodeCamp: JavaScript Algorithms and Data Structures,JavaScript Foundations,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/
+BE_06_01,MDN: Server-side website programming,Frontend Basics,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side
+BE_06_02,Full Stack Open,Frontend Basics,Easy,6,University of Helsinki,https://fullstackopen.com/en/
+BE_06_03,roadmap.sh Backend,Frontend Basics,Medium,10,roadmap.sh,https://roadmap.sh/backend
+BE_06_04,freeCodeCamp: Back End Development,Frontend Basics,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/back-end-development-and-apis/
+BE_07_01,Node.js Learn,Node.js Basics,Beginner,3,Node.js,https://nodejs.org/en/learn
+BE_07_02,Node.js Introduction,Node.js Basics,Easy,6,Node.js,https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
+BE_07_03,Full Stack Open Part 3,Node.js Basics,Medium,10,University of Helsinki,https://fullstackopen.com/en/part3
+BE_07_04,freeCodeCamp: Back End Development and APIs,Node.js Basics,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/back-end-development-and-apis/
+BE_08_01,Express: Installing,Express.js (Web Framework),Beginner,3,Express,https://expressjs.com/en/starter/installing.html
+BE_08_02,Express: Hello World,Express.js (Web Framework),Easy,6,Express,https://expressjs.com/en/starter/hello-world.html
+BE_08_03,Express: Routing,Express.js (Web Framework),Medium,10,Express,https://expressjs.com/en/guide/routing.html
+BE_08_04,MDN: Express/Node tutorial,Express.js (Web Framework),High,15,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs
+BE_09_01,MDN: HTTP overview,REST APIs in Node,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+BE_09_02,MDN: Fetch API,REST APIs in Node,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+BE_09_03,REST API Tutorial,REST APIs in Node,Medium,10,RESTful API,https://restfulapi.net/
+BE_09_04,Postman: Learning Center,REST APIs in Node,High,15,Postman,https://learning.postman.com/docs/getting-started/introduction/
+BE_10_01,MDN: Testing,Testing (Node.js),Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing
+BE_10_02,Jest Getting Started,Testing (Node.js),Easy,6,Jest,https://jestjs.io/docs/getting-started
+BE_10_03,Vitest Guide,Testing (Node.js),Medium,10,Vitest,https://vitest.dev/guide/
+BE_10_04,Playwright Introduction,Testing (Node.js),High,15,Playwright,https://playwright.dev/docs/intro
+BE_11_01,Python Tutorial,Python Basics,Beginner,3,Python.org,https://docs.python.org/3/tutorial/
+BE_11_02,Python Beginner's Guide,Python Basics,Easy,6,Python.org,https://wiki.python.org/moin/BeginnersGuide
+BE_11_03,Real Python Tutorials,Python Basics,Medium,10,Real Python,https://realpython.com/
+BE_11_04,freeCodeCamp: Scientific Computing with Python,Python Basics,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/scientific-computing-with-python/
+BE_12_01,Django Tutorial,Django or Flask (Web Framework),Beginner,3,Django,https://docs.djangoproject.com/en/stable/intro/tutorial01/
+BE_12_02,MDN: Django tutorial,Django or Flask (Web Framework),Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django
+BE_12_03,Django Girls Tutorial,Django or Flask (Web Framework),Medium,10,Django Girls,https://tutorial.djangogirls.org/en/
+BE_12_04,Django Documentation,Django or Flask (Web Framework),High,15,Django,https://docs.djangoproject.com/en/stable/
+BE_13_01,MDN: HTTP overview,REST APIs in Python,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+BE_13_02,MDN: Fetch API,REST APIs in Python,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+BE_13_03,REST API Tutorial,REST APIs in Python,Medium,10,RESTful API,https://restfulapi.net/
+BE_13_04,Postman: Learning Center,REST APIs in Python,High,15,Postman,https://learning.postman.com/docs/getting-started/introduction/
+BE_14_01,MDN: Testing,Testing (Python),Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing
+BE_14_02,Jest Getting Started,Testing (Python),Easy,6,Jest,https://jestjs.io/docs/getting-started
+BE_14_03,Vitest Guide,Testing (Python),Medium,10,Vitest,https://vitest.dev/guide/
+BE_14_04,Playwright Introduction,Testing (Python),High,15,Playwright,https://playwright.dev/docs/intro
+BE_15_01,SQLBolt,Databases (SQL),Beginner,3,SQLBolt,https://sqlbolt.com/
+BE_15_02,PostgreSQL Tutorial,Databases (SQL),Easy,6,PostgreSQL,https://www.postgresql.org/docs/current/tutorial.html
+BE_15_03,SQLZoo,Databases (SQL),Medium,10,SQLZoo,https://sqlzoo.net/wiki/SQL_Tutorial
+BE_15_04,W3Schools SQL Tutorial,Databases (SQL),High,15,W3Schools,https://www.w3schools.com/sql/
+BE_16_01,MongoDB University,NoSQL Databases,Beginner,3,MongoDB,https://learn.mongodb.com/
+BE_16_02,MongoDB Manual,NoSQL Databases,Easy,6,MongoDB,https://www.mongodb.com/docs/manual/
+BE_16_03,Redis University,NoSQL Databases,Medium,10,Redis,https://university.redis.io/
+BE_16_04,Firebase Firestore Documentation,NoSQL Databases,High,15,Firebase,https://firebase.google.com/docs/firestore
+BE_17_01,MDN: Server-side website programming,Learn about Web Servers,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side
+BE_17_02,NGINX Beginner's Guide,Learn about Web Servers,Easy,6,NGINX,https://nginx.org/en/docs/beginners_guide.html
+BE_17_03,Apache HTTP Server Tutorial,Learn about Web Servers,Medium,10,Apache,https://httpd.apache.org/docs/2.4/getting-started.html
+BE_17_04,Node.js HTTP documentation,Learn about Web Servers,High,15,Node.js,https://nodejs.org/api/http.html
+BE_18_01,GitHub Actions Quickstart,CI/CD Basics,Beginner,3,GitHub,https://docs.github.com/en/actions/quickstart
+BE_18_02,GitLab CI/CD Quick Start,CI/CD Basics,Easy,6,GitLab,https://docs.gitlab.com/ee/ci/quick_start/
+BE_18_03,Docker: CI/CD,CI/CD Basics,Medium,10,Docker,https://docs.docker.com/build/ci/
+BE_18_04,CircleCI: Getting Started,CI/CD Basics,High,15,CircleCI,https://circleci.com/docs/getting-started/
+BE_19_01,GitHub Copilot documentation,AI Assisted Coding,Beginner,3,GitHub,https://docs.github.com/en/copilot
+BE_19_02,MDN: AI on the Web,AI Assisted Coding,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/AI
+BE_19_03,Google: AI for Developers,AI Assisted Coding,Medium,10,Google,https://ai.google.dev/
+BE_19_04,Microsoft Learn: Generative AI,AI Assisted Coding,High,15,Microsoft,https://learn.microsoft.com/en-us/training/generative-ai/
+BE_20_01,OpenAI API Quickstart,Learn the Basics (AI in Backend),Beginner,3,OpenAI,https://platform.openai.com/docs/quickstart
+BE_20_02,Google AI for Developers,Learn the Basics (AI in Backend),Easy,6,Google,https://ai.google.dev/
+BE_20_03,Microsoft Learn: Generative AI,Learn the Basics (AI in Backend),Medium,10,Microsoft,https://learn.microsoft.com/en-us/training/generative-ai/
+BE_20_04,Hugging Face Course,Learn the Basics (AI in Backend),High,15,Hugging Face,https://huggingface.co/learn/nlp-course/chapter1/1
+BE_21_01,OpenAI API Quickstart,AI Applications in Software Development,Beginner,3,OpenAI,https://platform.openai.com/docs/quickstart
+BE_21_02,Google AI for Developers,AI Applications in Software Development,Easy,6,Google,https://ai.google.dev/
+BE_21_03,Microsoft Learn: Generative AI,AI Applications in Software Development,Medium,10,Microsoft,https://learn.microsoft.com/en-us/training/generative-ai/
+BE_21_04,Hugging Face Course,AI Applications in Software Development,High,15,Hugging Face,https://huggingface.co/learn/nlp-course/chapter1/1
+BE_22_01,OpenAI API Quickstart,Integration Patterns (For AI),Beginner,3,OpenAI,https://platform.openai.com/docs/quickstart
+BE_22_02,Google AI for Developers,Integration Patterns (For AI),Easy,6,Google,https://ai.google.dev/
+BE_22_03,Microsoft Learn: Generative AI,Integration Patterns (For AI),Medium,10,Microsoft,https://learn.microsoft.com/en-us/training/generative-ai/
+BE_22_04,Hugging Face Course,Integration Patterns (For AI),High,15,Hugging Face,https://huggingface.co/learn/nlp-course/chapter1/1
+BE_23_01,Redis University,Caching,Beginner,3,Redis,https://university.redis.io/
+BE_23_02,Redis Documentation,Caching,Easy,6,Redis,https://redis.io/docs/latest/
+BE_23_03,MDN: HTTP caching,Caching,Medium,10,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
+BE_23_04,web.dev: Browser caching,Caching,High,15,web.dev,https://web.dev/articles/http-cache
+BE_24_01,Elasticsearch: Getting started,Search Engines,Beginner,3,Elastic,https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html
+BE_24_02,OpenSearch Getting Started,Search Engines,Easy,6,OpenSearch,https://opensearch.org/docs/latest/getting-started/
+BE_24_03,Algolia Documentation,Search Engines,Medium,10,Algolia,https://www.algolia.com/doc/guides/getting-started/
+BE_24_04,Meilisearch Getting Started,Search Engines,High,15,Meilisearch,https://www.meilisearch.com/docs/learn/getting_started/overview
+BE_25_01,Socket.IO Get Started,Real Time Data,Beginner,3,Socket.IO,https://socket.io/get-started/chat
+BE_25_02,MDN: WebSocket API,Real Time Data,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
+BE_25_03,Firebase Realtime Database,Real Time Data,Medium,10,Firebase,https://firebase.google.com/docs/database
+BE_25_04,Ably Pub/Sub Basics,Real Time Data,High,15,Ably,https://ably.com/docs/getting-started
+BE_26_01,RabbitMQ Tutorials,Message Brokers,Beginner,3,RabbitMQ,https://www.rabbitmq.com/tutorials
+BE_26_02,Apache Kafka Quickstart,Message Brokers,Easy,6,Apache Kafka,https://kafka.apache.org/quickstart
+BE_26_03,Redis Pub/Sub,Message Brokers,Medium,10,Redis,https://redis.io/docs/latest/develop/interact/pubsub/
+BE_26_04,NATS by Example,Message Brokers,High,15,NATS,https://natsbyexample.com/
+BE_27_01,PostgreSQL High Availability,Scaling Databases,Beginner,3,PostgreSQL,https://www.postgresql.org/docs/current/high-availability.html
+BE_27_02,MongoDB Scaling,Scaling Databases,Easy,6,MongoDB,https://www.mongodb.com/docs/manual/sharding/
+BE_27_03,Redis Scaling,Scaling Databases,Medium,10,Redis,https://redis.io/docs/latest/operate/oss_and_stack/management/scaling/
+BE_27_04,AWS Well-Architected Framework,Scaling Databases,High,15,AWS,https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+BE_28_01,Martin Fowler: Software Architecture,Architectural Patterns,Beginner,3,Martin Fowler,https://martinfowler.com/architecture/
+BE_28_02,AWS Architecture Center,Architectural Patterns,Easy,6,AWS,https://aws.amazon.com/architecture/
+BE_28_03,Microsoft Architecture Center,Architectural Patterns,Medium,10,Microsoft,https://learn.microsoft.com/en-us/azure/architecture/
+BE_28_04,Google Cloud Architecture Framework,Architectural Patterns,High,15,Google Cloud,https://cloud.google.com/architecture/framework
+BE_29_01,AWS Well-Architected Framework,Building for Scale,Beginner,3,AWS,https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+BE_29_02,Google Cloud Architecture Framework,Building for Scale,Easy,6,Google Cloud,https://cloud.google.com/architecture/framework
+BE_29_03,Microsoft Azure Architecture Center,Building for Scale,Medium,10,Microsoft,https://learn.microsoft.com/en-us/azure/architecture/
+BE_29_04,Designing Data-Intensive Applications resources,Building for Scale,High,15,O'Reilly,https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
+BE_30_01,GraphQL Learn,GraphQL for Backend,Beginner,3,GraphQL,https://graphql.org/learn/
+BE_30_02,Apollo Server Documentation,GraphQL for Backend,Easy,6,Apollo,https://www.apollographql.com/docs/apollo-server/
+BE_30_03,GraphQL.js Learn,GraphQL for Backend,Medium,10,GraphQL.js,https://www.graphql-js.org/docs/
+BE_30_04,How to GraphQL,GraphQL for Backend,High,15,How to GraphQL,https://www.howtographql.com/
+BE_31_01,Martin Fowler: Microservices,Microservices,Beginner,3,Martin Fowler,https://martinfowler.com/articles/microservices.html
+BE_31_02,AWS: What are Microservices?,Microservices,Easy,6,AWS,https://aws.amazon.com/microservices/
+BE_31_03,Azure Architecture: Microservices,Microservices,Medium,10,Microsoft,https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
+BE_31_04,Google Cloud: Microservices Architecture,Microservices,High,15,Google Cloud,https://cloud.google.com/learn/what-is-microservices-architecture
+BE_32_01,Kong Gateway Documentation,API Gateway & Rate Limiting,Beginner,3,Kong,https://docs.konghq.com/gateway/latest/
+BE_32_02,AWS API Gateway Documentation,API Gateway & Rate Limiting,Easy,6,AWS,https://docs.aws.amazon.com/apigateway/
+BE_32_03,NGINX: Rate Limiting,API Gateway & Rate Limiting,Medium,10,NGINX,https://www.nginx.com/blog/rate-limiting-nginx/
+BE_32_04,Cloudflare: Rate Limiting Rules,API Gateway & Rate Limiting,High,15,Cloudflare,https://developers.cloudflare.com/waf/rate-limiting-rules/
+BE_33_01,LeetCode Practice Platform,Backend Interview Prep,Beginner,3,LeetCode,https://leetcode.com/
+BE_33_02,GeeksforGeeks Interview Questions,Backend Interview Prep,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/interview-preparation/
+BE_33_03,HackerRank Practice,Backend Interview Prep,Medium,10,HackerRank,https://www.hackerrank.com/
+BE_33_04,roadmap.sh Interview Guides,Backend Interview Prep,High,15,roadmap.sh,https://roadmap.sh/guides

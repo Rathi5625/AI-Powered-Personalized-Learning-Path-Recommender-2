@@ -1,0 +1,41 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+CSS_01_01,MDN: CSS Styling Basics,CSS Basics,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics
+CSS_01_02,W3Schools: CSS Tutorial,CSS Basics,Easy,6,W3Schools,https://www.w3schools.com/css/
+CSS_01_03,freeCodeCamp: Responsive Web Design,CSS Basics,Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+CSS_01_04,GeeksforGeeks: CSS,CSS Basics,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/css/
+CSS_02_01,MDN: The Box Model,Box Model & Layout,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
+CSS_02_02,W3Schools: CSS Box Model,Box Model & Layout,Easy,6,W3Schools,https://www.w3schools.com/css/css_boxmodel.asp
+CSS_02_03,GeeksforGeeks: CSS Box Model,Box Model & Layout,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/css-box-model/
+CSS_02_04,web.dev: Learn CSS,Box Model & Layout,High,15,web.dev,https://web.dev/learn/css/
+CSS_03_01,MDN: Flexbox,Flexbox,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox
+CSS_03_02,CSS-Tricks: A Guide to Flexbox,Flexbox,Easy,6,CSS-Tricks,https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+CSS_03_03,Flexbox Froggy,Flexbox,Medium,10,Flexbox Froggy,https://flexboxfroggy.com/
+CSS_03_04,W3Schools: CSS3 Flexbox,Flexbox,High,15,W3Schools,https://www.w3schools.com/css/css3_flexbox.asp
+CSS_04_01,MDN: CSS Grid Layout,Grid,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids
+CSS_04_02,CSS-Tricks: Complete Guide to Grid,Grid,Easy,6,CSS-Tricks,https://css-tricks.com/snippets/css/complete-guide-grid/
+CSS_04_03,Grid Garden,Grid,Medium,10,Grid Garden,https://cssgridgarden.com/
+CSS_04_04,W3Schools: CSS Grid,Grid,High,15,W3Schools,https://www.w3schools.com/css/css_grid.asp
+CSS_05_01,MDN: CSS Media Queries,Responsive Design & Media Queries,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries
+CSS_05_02,web.dev: Learn Responsive Design,Responsive Design & Media Queries,Easy,6,web.dev,https://web.dev/learn/design/
+CSS_05_03,freeCodeCamp: Responsive Web Design,Responsive Design & Media Queries,Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+CSS_05_04,W3Schools: RWD Intro,Responsive Design & Media Queries,High,15,W3Schools,https://www.w3schools.com/css/css_rwd_intro.asp
+CSS_06_01,MDN: Using CSS Animations,CSS Animations & Transitions,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
+CSS_06_02,MDN: Using CSS Transitions,CSS Animations & Transitions,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
+CSS_06_03,W3Schools: CSS3 Animations,CSS Animations & Transitions,Medium,10,W3Schools,https://www.w3schools.com/css/css3_animations.asp
+CSS_06_04,CSS-Tricks: Animation Almanac,CSS Animations & Transitions,High,15,CSS-Tricks,https://css-tricks.com/almanac/properties/a/animation/
+CSS_07_01,Sass Guide,CSS Preprocessors (Sass),Beginner,3,Sass,https://sass-lang.com/guide/
+CSS_07_02,Sass Documentation,CSS Preprocessors (Sass),Easy,6,Sass,https://sass-lang.com/documentation/
+CSS_07_03,W3Schools: Sass Tutorial,CSS Preprocessors (Sass),Medium,10,W3Schools,https://www.w3schools.com/sass/
+CSS_07_04,GeeksforGeeks: Introduction to Sass,CSS Preprocessors (Sass),High,15,GeeksforGeeks,https://www.geeksforgeeks.org/introduction-to-sass/
+CSS_08_01,Tailwind CSS Installation,CSS Frameworks (Tailwind/Bootstrap),Beginner,3,Tailwind CSS,https://tailwindcss.com/docs/installation
+CSS_08_02,Bootstrap Documentation,CSS Frameworks (Tailwind/Bootstrap),Easy,6,Bootstrap,https://getbootstrap.com/docs/5.3/getting-started/introduction/
+CSS_08_03,Bulma Documentation,CSS Frameworks (Tailwind/Bootstrap),Medium,10,Bulma,https://bulma.io/documentation/
+CSS_08_04,Material UI Introduction,CSS Frameworks (Tailwind/Bootstrap),High,15,MUI,https://mui.com/material-ui/getting-started/
+CSS_09_01,MDN: Using CSS Custom Properties,CSS Variables & Custom Properties,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+CSS_09_02,web.dev: CSS Custom Properties,CSS Variables & Custom Properties,Easy,6,web.dev,https://web.dev/articles/css-custom-properties
+CSS_09_03,W3Schools: CSS Variables,CSS Variables & Custom Properties,Medium,10,W3Schools,https://www.w3schools.com/css/css3_variables.asp
+CSS_09_04,CSS-Tricks: Complete Guide to Custom Properties,CSS Variables & Custom Properties,High,15,CSS-Tricks,https://css-tricks.com/a-complete-guide-to-custom-properties/
+CSS_10_01,BEM: Quick Start,CSS Architecture (BEM),Beginner,3,BEM,https://en.bem.info/methodology/quick-start/
+CSS_10_02,CSS-Tricks: BEM 101,CSS Architecture (BEM),Easy,6,CSS-Tricks,https://css-tricks.com/bem-101/
+CSS_10_03,GeeksforGeeks: CSS BEM,CSS Architecture (BEM),Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/css-bem-block-element-modifier/
+CSS_10_04,SMACSS,CSS Architecture (BEM),High,15,SMACSS,https://smacss.com/

@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    @apply bg-void text-text font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    font-weight: 400;
+  }
+
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ion/70 ring-offset-2 ring-offset-void;
+  }
+
+  ::selection {
+    background: rgba(91, 209, 224, 0.25);
+    color: #f4f6f9;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0c10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262b37;
+    border-radius: 999px;
+    border: 2px solid #0a0c10;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333a4a;
+  }
+}
+
+@layer components {
+  /* HUD monospace readout label */
+  .hud-label {
+    @apply font-mono text-hud uppercase text-muted;
+  }
+
+  .eyebrow {
+    @apply font-mono text-eyebrow uppercase text-ion;
+  }
+
+  /* Faint engineering grid used behind the core / hero */
+  .bg-blueprint {
+    @apply bg-grid-faint bg-grid;
+  }
+
+  /* Panel surface used across cards, slide-overs */
+  .surface-card {
+    @apply rounded-card border border-line bg-surface/80 backdrop-blur-sm;
+  }
+
+  /* Thin HUD corner ticks (applied to a positioned container) */
+  .hud-corner::before,
+  .hud-corner::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: rgba(138, 147, 166, 0.5);
+    border-style: solid;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* subtle scanline overlay for HUD frames */
+  .scanline {
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.015) 0px,
+      rgba(255, 255, 255, 0.015) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+}

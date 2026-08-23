@@ -1,0 +1,57 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+PY_01_01,Python Official Tutorial,Python Basics/Syntax,Beginner,3,Python.org,https://docs.python.org/3/tutorial/
+PY_01_02,W3Schools Python Tutorial,Python Basics/Syntax,Easy,6,W3Schools,https://www.w3schools.com/python/
+PY_01_03,Real Python Tutorials,Python Basics/Syntax,Medium,10,Real Python,https://realpython.com/
+PY_01_04,GeeksforGeeks: Python Programming Language,Python Basics/Syntax,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/python-programming-language/
+PY_02_01,Python Docs: Data Structures,Data Structures in Python,Beginner,3,Python.org,https://docs.python.org/3/tutorial/datastructures.html
+PY_02_02,Real Python: Python Data Structures,Data Structures in Python,Easy,6,Real Python,https://realpython.com/python-data-structures/
+PY_02_03,GeeksforGeeks: Python Data Structures,Data Structures in Python,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/python-data-structures/
+PY_02_04,W3Schools: Python Data Types,Data Structures in Python,High,15,W3Schools,https://www.w3schools.com/python/python_datatypes.asp
+PY_03_01,Real Python: OOP in Python 3,OOP in Python,Beginner,3,Real Python,https://realpython.com/python3-object-oriented-programming/
+PY_03_02,Python Docs: Classes,OOP in Python,Easy,6,Python.org,https://docs.python.org/3/tutorial/classes.html
+PY_03_03,GeeksforGeeks: Python OOP Concepts,OOP in Python,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/python-oops-concepts/
+PY_03_04,W3Schools: Python Classes,OOP in Python,High,15,W3Schools,https://www.w3schools.com/python/python_classes.asp
+PY_04_01,Python Docs: Input and Output,File Handling,Beginner,3,Python.org,https://docs.python.org/3/tutorial/inputoutput.html
+PY_04_02,Real Python: Reading and Writing Files,File Handling,Easy,6,Real Python,https://realpython.com/read-write-files-python/
+PY_04_03,GeeksforGeeks: File Handling in Python,File Handling,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/file-handling-python/
+PY_04_04,W3Schools: Python File Handling,File Handling,High,15,W3Schools,https://www.w3schools.com/python/python_file_handling.asp
+PY_05_01,Python Docs: Errors and Exceptions,Error Handling,Beginner,3,Python.org,https://docs.python.org/3/tutorial/errors.html
+PY_05_02,Real Python: Python Exceptions,Error Handling,Easy,6,Real Python,https://realpython.com/python-exceptions/
+PY_05_03,GeeksforGeeks: Python Exception Handling,Error Handling,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/python-exception-handling/
+PY_05_04,W3Schools: Python Try Except,Error Handling,High,15,W3Schools,https://www.w3schools.com/python/python_try_except.asp
+PY_06_01,Python Docs: Modules,Modules & Packages,Beginner,3,Python.org,https://docs.python.org/3/tutorial/modules.html
+PY_06_02,Real Python: Modules and Packages,Modules & Packages,Easy,6,Real Python,https://realpython.com/python-modules-packages/
+PY_06_03,GeeksforGeeks: Python Modules,Modules & Packages,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/python-modules/
+PY_06_04,W3Schools: Python Modules,Modules & Packages,High,15,W3Schools,https://www.w3schools.com/python/python_modules.asp
+PY_07_01,Python Docs: venv,Virtual Environments & pip,Beginner,3,Python.org,https://docs.python.org/3/library/venv.html
+PY_07_02,Real Python: Virtual Environments Primer,Virtual Environments & pip,Easy,6,Real Python,https://realpython.com/python-virtual-environments-a-primer/
+PY_07_03,pip Documentation,Virtual Environments & pip,Medium,10,pip,https://pip.pypa.io/en/stable/
+PY_07_04,GeeksforGeeks: Python Virtual Environment,Virtual Environments & pip,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/python-virtual-environment/
+PY_08_01,Real Python: Beautiful Soup Web Scraper,Web Scraping,Beginner,3,Real Python,https://realpython.com/beautiful-soup-web-scraper-python/
+PY_08_02,Beautiful Soup Documentation,Web Scraping,Easy,6,Crummy.com,https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+PY_08_03,Scrapy Documentation,Web Scraping,Medium,10,Scrapy,https://docs.scrapy.org/en/latest/
+PY_08_04,GeeksforGeeks: Python Web Scraping Tutorial,Web Scraping,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/python-web-scraping-tutorial/
+PY_09_01,NumPy Quickstart,Data Science Libraries (NumPy/Pandas),Beginner,3,NumPy,https://numpy.org/doc/stable/user/quickstart.html
+PY_09_02,Pandas: Getting Started,Data Science Libraries (NumPy/Pandas),Easy,6,pandas,https://pandas.pydata.org/docs/getting_started/index.html
+PY_09_03,Real Python: NumPy Tutorial,Data Science Libraries (NumPy/Pandas),Medium,10,Real Python,https://realpython.com/numpy-tutorial/
+PY_09_04,freeCodeCamp: Scientific Computing with Python,Data Science Libraries (NumPy/Pandas),High,15,freeCodeCamp,https://www.freecodecamp.org/learn/scientific-computing-with-python/
+PY_10_01,Django Tutorial,Web Frameworks (Django/Flask),Beginner,3,Django,https://docs.djangoproject.com/en/stable/intro/tutorial01/
+PY_10_02,Flask: Quickstart,Web Frameworks (Django/Flask),Easy,6,Flask,https://flask.palletsprojects.com/en/latest/quickstart/
+PY_10_03,Django Girls Tutorial,Web Frameworks (Django/Flask),Medium,10,Django Girls,https://tutorial.djangogirls.org/en/
+PY_10_04,Real Python: Flask by Example,Web Frameworks (Django/Flask),High,15,Real Python,https://realpython.com/flask-by-example-part-1-project-setup/
+PY_11_01,pytest Documentation,Testing (pytest),Beginner,3,pytest,https://docs.pytest.org/en/stable/
+PY_11_02,Real Python: Testing With pytest,Testing (pytest),Easy,6,Real Python,https://realpython.com/pytest-python-testing/
+PY_11_03,GeeksforGeeks: Python Testing Using pytest,Testing (pytest),Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/python-testing-using-pytest/
+PY_11_04,Python Docs: unittest,Testing (pytest),High,15,Python.org,https://docs.python.org/3/library/unittest.html
+PY_12_01,Python Docs: asyncio,Async Programming (asyncio),Beginner,3,Python.org,https://docs.python.org/3/library/asyncio.html
+PY_12_02,Real Python: Async IO in Python,Async Programming (asyncio),Easy,6,Real Python,https://realpython.com/async-io-python/
+PY_12_03,GeeksforGeeks: asyncio in Python,Async Programming (asyncio),Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/asyncio-in-python/
+PY_12_04,FastAPI: Async Documentation,Async Programming (asyncio),High,15,FastAPI,https://fastapi.tiangolo.com/async/
+PY_13_01,Automate the Boring Stuff with Python,Python for Automation/Scripting,Beginner,3,Al Sweigart,https://automatetheboringstuff.com/
+PY_13_02,Real Python: Best Practices Tutorials,Python for Automation/Scripting,Easy,6,Real Python,https://realpython.com/tutorials/best-practices/
+PY_13_03,GeeksforGeeks: Python Automation Tutorial,Python for Automation/Scripting,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/python-automation-tutorial/
+PY_13_04,W3Schools Python Tutorial,Python for Automation/Scripting,High,15,W3Schools,https://www.w3schools.com/python/
+PY_14_01,LeetCode Practice Platform,Python Interview Prep / DSA in Python,Beginner,3,LeetCode,https://leetcode.com/
+PY_14_02,GeeksforGeeks Interview Questions,Python Interview Prep / DSA in Python,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/python-interview-questions/
+PY_14_03,HackerRank Practice,Python Interview Prep / DSA in Python,Medium,10,HackerRank,https://www.hackerrank.com/domains/python
+PY_14_04,roadmap.sh Interview Guides,Python Interview Prep / DSA in Python,High,15,roadmap.sh,https://roadmap.sh/guides

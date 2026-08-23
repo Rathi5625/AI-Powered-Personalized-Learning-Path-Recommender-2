@@ -1,0 +1,53 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+CPP_01_01,cppreference: The C++ Language,C++ Basics/Syntax,Beginner,3,cppreference,https://en.cppreference.com/w/cpp/language.html
+CPP_01_02,LearnCpp.com,C++ Basics/Syntax,Easy,6,LearnCpp,https://www.learncpp.com/
+CPP_01_03,W3Schools C++ Tutorial,C++ Basics/Syntax,Medium,10,W3Schools,https://www.w3schools.com/cpp/
+CPP_01_04,GeeksforGeeks: C++ Programming Language,C++ Basics/Syntax,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/c-plus-plus/
+CPP_02_01,LearnCpp: Introduction to Pointers,Pointers & Memory Management,Beginner,3,LearnCpp,https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/
+CPP_02_02,cppreference: Pointer declaration,Pointers & Memory Management,Easy,6,cppreference,https://en.cppreference.com/w/cpp/language/pointer.html
+CPP_02_03,GeeksforGeeks: Pointers in C/C++,Pointers & Memory Management,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/pointers-in-c-and-c-set-1-introduction-arithmetic-and-array/
+CPP_02_04,W3Schools: C++ Pointers,Pointers & Memory Management,High,15,W3Schools,https://www.w3schools.com/cpp/cpp_pointers.asp
+CPP_03_01,LearnCpp: Introduction to OOP,OOP in C++,Beginner,3,LearnCpp,https://www.learncpp.com/cpp-tutorial/introduction-to-object-oriented-programming/
+CPP_03_02,GeeksforGeeks: OOP in C++,OOP in C++,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/object-oriented-programming-in-cpp/
+CPP_03_03,cppreference: Classes,OOP in C++,Medium,10,cppreference,https://en.cppreference.com/w/cpp/language/classes.html
+CPP_03_04,W3Schools: C++ OOP,OOP in C++,High,15,W3Schools,https://www.w3schools.com/cpp/cpp_oop.asp
+CPP_04_01,cppreference: Containers Library,STL (Standard Template Library),Beginner,3,cppreference,https://en.cppreference.com/w/cpp/container.html
+CPP_04_02,GeeksforGeeks: The C++ Standard Template Library,STL (Standard Template Library),Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
+CPP_04_03,LearnCpp: std::vector Introduction,STL (Standard Template Library),Medium,10,LearnCpp,https://www.learncpp.com/cpp-tutorial/an-introduction-to-stdvector/
+CPP_04_04,W3Schools: C++ STL,STL (Standard Template Library),High,15,W3Schools,https://www.w3schools.com/cpp/cpp_stl.asp
+CPP_05_01,cppreference: Templates,Templates & Generic Programming,Beginner,3,cppreference,https://en.cppreference.com/w/cpp/language/templates.html
+CPP_05_02,LearnCpp: Function Templates,Templates & Generic Programming,Easy,6,LearnCpp,https://www.learncpp.com/cpp-tutorial/function-templates/
+CPP_05_03,GeeksforGeeks: Templates in C++,Templates & Generic Programming,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/templates-cpp/
+CPP_05_04,W3Schools C++ Tutorial,Templates & Generic Programming,High,15,W3Schools,https://www.w3schools.com/cpp/
+CPP_06_01,cppreference: Exceptions,Exception Handling,Beginner,3,cppreference,https://en.cppreference.com/w/cpp/language/exceptions.html
+CPP_06_02,LearnCpp: Basic Exception Handling,Exception Handling,Easy,6,LearnCpp,https://www.learncpp.com/cpp-tutorial/basic-exception-handling/
+CPP_06_03,GeeksforGeeks: Exception Handling in C++,Exception Handling,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/exception-handling-c/
+CPP_06_04,W3Schools: C++ Exceptions,Exception Handling,High,15,W3Schools,https://www.w3schools.com/cpp/cpp_exceptions.asp
+CPP_07_01,cppreference: Input/Output Library,File I/O,Beginner,3,cppreference,https://en.cppreference.com/w/cpp/io.html
+CPP_07_02,LearnCpp: Basic File I/O,File I/O,Easy,6,LearnCpp,https://www.learncpp.com/cpp-tutorial/basic-file-io/
+CPP_07_03,GeeksforGeeks: File Handling in C++,File I/O,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/file-handling-c-classes/
+CPP_07_04,W3Schools: C++ Files,File I/O,High,15,W3Schools,https://www.w3schools.com/cpp/cpp_files.asp
+CPP_08_01,cppreference: Thread Support Library,Multithreading in C++,Beginner,3,cppreference,https://en.cppreference.com/w/cpp/thread.html
+CPP_08_02,GeeksforGeeks: Multithreading in C++,Multithreading in C++,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/multithreading-in-cpp/
+CPP_08_03,Modernes C++ Blog,Multithreading in C++,Medium,10,Modernes C++,https://www.modernescpp.com/
+CPP_08_04,W3Schools C++ Tutorial,Multithreading in C++,High,15,W3Schools,https://www.w3schools.com/cpp/
+CPP_09_01,cppreference: C++ Version History,Modern C++ (C++11/14/17/20),Beginner,3,cppreference,https://en.cppreference.com/w/cpp/language/history.html
+CPP_09_02,ISO C++ Core Guidelines,Modern C++ (C++11/14/17/20),Easy,6,ISO C++,https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+CPP_09_03,GeeksforGeeks: C++11 New Features,Modern C++ (C++11/14/17/20),Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/c-11-standard-templates/
+CPP_09_04,LearnCpp.com,Modern C++ (C++11/14/17/20),High,15,LearnCpp,https://www.learncpp.com/
+CPP_10_01,Codeforces,Competitive Programming in C++,Beginner,3,Codeforces,https://codeforces.com/
+CPP_10_02,LeetCode,Competitive Programming in C++,Easy,6,LeetCode,https://leetcode.com/
+CPP_10_03,CP-Algorithms,Competitive Programming in C++,Medium,10,CP-Algorithms,https://cp-algorithms.com/
+CPP_10_04,GeeksforGeeks: Competitive Programming Guide,Competitive Programming in C++,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/competitive-programming-a-complete-guide/
+CPP_11_01,CMake Tutorial,Build Tools (CMake),Beginner,3,CMake,https://cmake.org/cmake/help/latest/guide/tutorial/index.html
+CPP_11_02,CMake Documentation,Build Tools (CMake),Easy,6,CMake,https://cmake.org/documentation/
+CPP_11_03,GeeksforGeeks: CMake Tutorial,Build Tools (CMake),Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/cmake-tutorial/
+CPP_11_04,Modern CMake,Build Tools (CMake),High,15,Modern CMake,https://cliutils.gitlab.io/modern-cmake/
+CPP_12_01,Google Test Primer,Testing (Google Test),Beginner,3,Google,https://google.github.io/googletest/primer.html
+CPP_12_02,Google Test (GitHub),Testing (Google Test),Easy,6,GitHub,https://github.com/google/googletest
+CPP_12_03,GeeksforGeeks: Google Test Framework,Testing (Google Test),Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/google-test-a-framework-for-c-test-programs/
+CPP_12_04,Catch2 Tutorial,Testing (Google Test),High,15,Catch2,https://github.com/catchorg/Catch2/blob/devel/docs/tutorial.md
+CPP_13_01,LeetCode Practice Platform,C++ Interview Prep / DSA in C++,Beginner,3,LeetCode,https://leetcode.com/
+CPP_13_02,GeeksforGeeks Interview Questions,C++ Interview Prep / DSA in C++,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/c-plus-plus-interview-questions/
+CPP_13_03,HackerRank Practice,C++ Interview Prep / DSA in C++,Medium,10,HackerRank,https://www.hackerrank.com/domains/cpp
+CPP_13_04,roadmap.sh Interview Guides,C++ Interview Prep / DSA in C++,High,15,roadmap.sh,https://roadmap.sh/guides

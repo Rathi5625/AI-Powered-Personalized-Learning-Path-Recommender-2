@@ -1,0 +1,208 @@
+package com.learningpath.service;
+
+import com.learningpath.dto.request.LoginRequest;
+import com.learningpath.dto.request.RegisterRequest;
+import com.learningpath.dto.request.VerifyOtpRequest;
+import com.learningpath.dto.response.AuthResponse;
+import com.learningpath.entity.OtpPurpose;
+import com.learningpath.entity.Role;
+import com.learningpath.entity.User;
+import com.learningpath.exception.AccountNotVerifiedException;
+import com.learningpath.exception.InvalidRequestException;
+import com.learningpath.repository.UserRepository;
+import com.learningpath.security.JwtService;
+import java.util.Optional;
+import java.util.UUID;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
+
+@ExtendWith(MockitoExtension.class)
+class AuthServiceTest {
+
+    @Mock
+    private UserRepository userRepository;
+
+    @Mock
+    private PasswordEncoder passwordEncoder;
+
+    @Mock
+    private JwtService jwtService;
+
+    @Mock
+    private AuthenticationManager authenticationManager;
+
+    @Mock
+    private ProfileService profileService;
+
+    @Mock
+    private OtpService otpService;
+
+    private AuthService authServiceDirect;
+    private AuthService authServiceWithOtp;
+
+    @BeforeEach
+    void setUp() {
+        authServiceDirect = new AuthService(
+                userRepository,
+                passwordEncoder,
+                jwtService,
+                authenticationManager,
+                profileService,
+                otpService,
+                false
+        );
+
+        authServiceWithOtp = new AuthService(
+                userRepository,
+                passwordEncoder,
+                jwtService,
+                authenticationManager,
+                profileService,
+                otpService,
+                true
+        );
+    }
+
+    @Test
+    @DisplayName("Should successfully register a new user directly when email verification is disabled")
+    void shouldRegisterNewUserDirectly() {
+        RegisterRequest request = new RegisterRequest("newuser@example.com", "secret123", "New User");
+
+        when(userRepository.existsByEmail("newuser@example.com")).thenReturn(false);
+        when(passwordEncoder.encode("secret123")).thenReturn("encodedPassword");
+
+        User savedUser = User.builder()
+                .id(UUID.randomUUID())
+                .email("newuser@example.com")
+                .fullName("New User")
+                .passwordHash("encodedPassword")
+                .role(Role.LEARNER)
+                .emailVerified(true)
+                .build();
+
+        when(userRepository.save(any(User.class))).thenReturn(savedUser);
+        when(jwtService.generateToken(any(UserDetails.class))).thenReturn("jwt-token-xyz");
+
+        AuthResponse response = authServiceDirect.register(request);
+
+        assertNotNull(response);
+        assertEquals("jwt-token-xyz", response.getToken());
+        assertEquals("newuser@example.com", response.getUser().getEmail());
+        verify(profileService).createDefaultProfileForEmail("newuser@example.com");
+    }
+
+    @Test
+    @DisplayName("Should send OTP when email verification is required")
+    void shouldSendOtpOnRegistrationWhenRequired() {
+        RegisterRequest request = new RegisterRequest("verify@example.com", "secret123", "Verify User");
+
+        when(userRepository.existsByEmail("verify@example.com")).thenReturn(false);
+        when(passwordEncoder.encode("secret123")).thenReturn("encodedPassword");
+
+        User savedUser = User.builder()
+                .id(UUID.randomUUID())
+                .email("verify@example.com")
+                .fullName("Verify User")
+                .passwordHash("encodedPassword")
+                .role(Role.LEARNER)
+                .emailVerified(false)
+                .build();
+
+        when(userRepository.save(any(User.class))).thenReturn(savedUser);
+
+        AuthResponse response = authServiceWithOtp.register(request);
+
+        assertNotNull(response);
+        assertTrue(response.isEmailVerificationRequired());
+        verify(otpService).createAndSendOtp(eq(savedUser), eq(OtpPurpose.EMAIL_VERIFICATION));
+    }
+
+    @Test
+    @DisplayName("Should throw InvalidRequestException when registering existing email")
+    void shouldThrowExceptionWhenEmailExists() {
+        RegisterRequest request = new RegisterRequest("existing@example.com", "secret123", "Existing User");
+        when(userRepository.existsByEmail("existing@example.com")).thenReturn(true);
+
+        assertThrows(InvalidRequestException.class, () -> authServiceDirect.register(request));
+    }
+
+    @Test
+    @DisplayName("Should successfully log in verified user and return JWT token")
+    void shouldLoginUser() {
+        LoginRequest request = new LoginRequest("user@example.com", "password");
+
+        User user = User.builder()
+                .id(UUID.randomUUID())
+                .email("user@example.com")
+                .fullName("Test User")
+                .passwordHash("hashed")
+                .role(Role.LEARNER)
+                .emailVerified(true)
+                .build();
+
+        when(userRepository.findByEmail("user@example.com")).thenReturn(Optional.of(user));
+        when(jwtService.generateToken(any(UserDetails.class))).thenReturn("jwt-token-abc");
+
+        AuthResponse response = authServiceDirect.login(request);
+
+        assertNotNull(response);
+        assertEquals("jwt-token-abc", response.getToken());
+        verify(authenticationManager).authenticate(any(UsernamePasswordAuthenticationToken.class));
+    }
+
+    @Test
+    @DisplayName("Should throw AccountNotVerifiedException when logging in with unverified email")
+    void shouldRejectUnverifiedUserLogin() {
+        LoginRequest request = new LoginRequest("unverified@example.com", "password");
+
+        User user = User.builder()
+                .id(UUID.randomUUID())
+                .email("unverified@example.com")
+                .fullName("Unverified User")
+                .passwordHash("hashed")
+                .role(Role.LEARNER)
+                .emailVerified(false)
+                .build();
+
+        when(userRepository.findByEmail("unverified@example.com")).thenReturn(Optional.of(user));
+
+        assertThrows(AccountNotVerifiedException.class, () -> authServiceWithOtp.login(request));
+    }
+
+    @Test
+    @DisplayName("Should verify OTP and return JWT token")
+    void shouldVerifyOtpSuccessfully() {
+        VerifyOtpRequest request = new VerifyOtpRequest("user@example.com", "123456");
+
+        User user = User.builder()
+                .id(UUID.randomUUID())
+                .email("user@example.com")
+                .fullName("Test User")
+                .passwordHash("hashed")
+                .role(Role.LEARNER)
+                .emailVerified(false)
+                .build();
+
+        when(userRepository.findByEmail("user@example.com")).thenReturn(Optional.of(user));
+        when(userRepository.save(any(User.class))).thenReturn(user);
+        when(jwtService.generateToken(any(UserDetails.class))).thenReturn("verified-jwt-token");
+
+        AuthResponse response = authServiceWithOtp.verifyOtp(request);
+
+        assertNotNull(response);
+        assertEquals("verified-jwt-token", response.getToken());
+        verify(otpService).validateAndConsumeOtp(eq(user), eq("123456"), eq(OtpPurpose.EMAIL_VERIFICATION));
+    }
+}

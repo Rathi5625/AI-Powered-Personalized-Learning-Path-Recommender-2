@@ -1,0 +1,57 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+JV_01_01,Oracle Java Tutorials,Java Basics/Syntax,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/
+JV_01_02,W3Schools Java Tutorial,Java Basics/Syntax,Easy,6,W3Schools,https://www.w3schools.com/java/
+JV_01_03,GeeksforGeeks Java,Java Basics/Syntax,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/java/
+JV_01_04,Baeldung: Java Tutorial,Java Basics/Syntax,High,15,Baeldung,https://www.baeldung.com/java-tutorial
+JV_02_01,Oracle: OOP Concepts,OOP in Java,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/java/concepts/
+JV_02_02,GeeksforGeeks: Java OOP Concepts,OOP in Java,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/java-oops-concepts/
+JV_02_03,W3Schools: Java OOP,OOP in Java,Medium,10,W3Schools,https://www.w3schools.com/java/java_oop.asp
+JV_02_04,Baeldung: Java Tutorial,OOP in Java,High,15,Baeldung,https://www.baeldung.com/java-tutorial
+JV_03_01,Oracle: Collections Trail,Collections Framework,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/collections/
+JV_03_02,Baeldung: Java Collections Guide,Collections Framework,Easy,6,Baeldung,https://www.baeldung.com/java-collections
+JV_03_03,GeeksforGeeks: Collections in Java,Collections Framework,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/collections-in-java-2/
+JV_03_04,W3Schools: Java Collections,Collections Framework,High,15,W3Schools,https://www.w3schools.com/java/java_collections.asp
+JV_04_01,Oracle: Exceptions Trail,Exception Handling,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/essential/exceptions/
+JV_04_02,GeeksforGeeks: Exceptions in Java,Exception Handling,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/exceptions-in-java/
+JV_04_03,Baeldung: Java Exceptions,Exception Handling,Medium,10,Baeldung,https://www.baeldung.com/java-exceptions
+JV_04_04,W3Schools: Java Try/Catch,Exception Handling,High,15,W3Schools,https://www.w3schools.com/java/java_try_catch.asp
+JV_05_01,Oracle: Concurrency Trail,Multithreading & Concurrency,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/essential/concurrency/
+JV_05_02,Baeldung: Java Concurrency,Multithreading & Concurrency,Easy,6,Baeldung,https://www.baeldung.com/java-concurrency
+JV_05_03,GeeksforGeeks: Multithreading in Java,Multithreading & Concurrency,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/multithreading-in-java/
+JV_05_04,W3Schools: Java Threads,Multithreading & Concurrency,High,15,W3Schools,https://www.w3schools.com/java/java_threads.asp
+JV_06_01,Oracle: Lambda Expressions,Java 8+ Streams & Lambdas,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+JV_06_02,Baeldung: Java 8 Streams,Java 8+ Streams & Lambdas,Easy,6,Baeldung,https://www.baeldung.com/java-8-streams
+JV_06_03,GeeksforGeeks: Stream In Java,Java 8+ Streams & Lambdas,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/stream-in-java/
+JV_06_04,W3Schools: Java Streams,Java 8+ Streams & Lambdas,High,15,W3Schools,https://www.w3schools.com/java/java_streams.asp
+JV_07_01,Oracle: Basic I/O Trail,File I/O,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/essential/io/
+JV_07_02,GeeksforGeeks: File Handling in Java,File I/O,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/file-handling-in-java/
+JV_07_03,Baeldung: Reading a File in Java,File I/O,Medium,10,Baeldung,https://www.baeldung.com/reading-file-in-java
+JV_07_04,W3Schools: Java Files,File I/O,High,15,W3Schools,https://www.w3schools.com/java/java_files.asp
+JV_08_01,Oracle: JDBC Tutorial,JDBC & Databases,Beginner,3,Oracle,https://docs.oracle.com/javase/tutorial/jdbc/
+JV_08_02,Baeldung: Guide to JDBC,JDBC & Databases,Easy,6,Baeldung,https://www.baeldung.com/java-jdbc
+JV_08_03,GeeksforGeeks: JDBC Tutorial,JDBC & Databases,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/jdbc-tutorial/
+JV_08_04,W3Schools: MySQL Java,JDBC & Databases,High,15,W3Schools,https://www.w3schools.com/java/java_mysql_connect.asp
+JV_09_01,Spring.io Guides,Spring Framework Basics,Beginner,3,Spring,https://spring.io/guides
+JV_09_02,Baeldung: Spring Tutorial,Spring Framework Basics,Easy,6,Baeldung,https://www.baeldung.com/spring-tutorial
+JV_09_03,Spring Framework Reference Docs,Spring Framework Basics,Medium,10,Spring,https://docs.spring.io/spring-framework/reference/
+JV_09_04,GeeksforGeeks: Spring,Spring Framework Basics,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/spring/
+JV_10_01,Spring Boot Reference Documentation,Spring Boot,Beginner,3,Spring,https://docs.spring.io/spring-boot/index.html
+JV_10_02,Spring Boot: Getting Started Guide,Spring Boot,Easy,6,Spring,https://spring.io/guides/gs/spring-boot
+JV_10_03,Baeldung: Spring Boot,Spring Boot,Medium,10,Baeldung,https://www.baeldung.com/spring-boot
+JV_10_04,GeeksforGeeks: Spring Boot,Spring Boot,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/spring-boot/
+JV_11_01,Maven: Getting Started Guide,Build Tools (Maven/Gradle),Beginner,3,Apache Maven,https://maven.apache.org/guides/getting-started/
+JV_11_02,Gradle User Guide,Build Tools (Maven/Gradle),Easy,6,Gradle,https://docs.gradle.org/current/userguide/userguide.html
+JV_11_03,Baeldung: Maven Guide,Build Tools (Maven/Gradle),Medium,10,Baeldung,https://www.baeldung.com/maven
+JV_11_04,Baeldung: Gradle,Build Tools (Maven/Gradle),High,15,Baeldung,https://www.baeldung.com/gradle
+JV_12_01,JUnit 5 User Guide,Testing (JUnit),Beginner,3,JUnit,https://junit.org/junit5/docs/current/user-guide/
+JV_12_02,Baeldung: JUnit 5,Testing (JUnit),Easy,6,Baeldung,https://www.baeldung.com/junit-5
+JV_12_03,Mockito Documentation,Testing (JUnit),Medium,10,Mockito,https://site.mockito.org/
+JV_12_04,GeeksforGeeks: JUnit Testing Framework,Testing (JUnit),High,15,GeeksforGeeks,https://www.geeksforgeeks.org/junit-testing-framework/
+JV_13_01,LeetCode Practice Platform,Java Interview Prep / DSA in Java,Beginner,3,LeetCode,https://leetcode.com/
+JV_13_02,GeeksforGeeks Interview Questions,Java Interview Prep / DSA in Java,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/java-interview-questions/
+JV_13_03,HackerRank Practice,Java Interview Prep / DSA in Java,Medium,10,HackerRank,https://www.hackerrank.com/domains/java
+JV_13_04,roadmap.sh Interview Guides,Java Interview Prep / DSA in Java,High,15,roadmap.sh,https://roadmap.sh/guides
+JV_14_01,Refactoring.Guru: Design Patterns in Java,Design Patterns in Java,Beginner,3,Refactoring.Guru,https://refactoring.guru/design-patterns/java
+JV_14_02,Baeldung: Design Patterns Series,Design Patterns in Java,Easy,6,Baeldung,https://www.baeldung.com/design-patterns-series
+JV_14_03,GeeksforGeeks: Software Design Patterns,Design Patterns in Java,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/software-design-patterns/
+JV_14_04,SourceMaking: Design Patterns,Design Patterns in Java,High,15,SourceMaking,https://sourcemaking.com/design_patterns

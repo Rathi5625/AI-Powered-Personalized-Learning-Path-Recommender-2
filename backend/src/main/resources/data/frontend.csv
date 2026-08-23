@@ -1,0 +1,145 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+FE_01_01,MDN: How the web works,Internet Basics,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics
+FE_01_02,MDN: Getting started with the Web,Internet Basics,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website
+FE_01_03,web.dev: Learn Performance,Internet Basics,Medium,10,web.dev,https://web.dev/learn/performance/
+FE_01_04,freeCodeCamp: Responsive Web Design,Internet Basics,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+FE_02_01,MDN: Structuring content with HTML,HTML,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content
+FE_02_02,MDN: Introduction to HTML,HTML,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content
+FE_02_03,freeCodeCamp: Responsive Web Design,HTML,Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+FE_02_04,web.dev: Learn HTML,HTML,High,15,web.dev,https://web.dev/learn/html/
+FE_03_01,MDN: CSS styling basics,CSS,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics
+FE_03_02,MDN: CSS layout,CSS,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout
+FE_03_03,web.dev: Learn CSS,CSS,Medium,10,web.dev,https://web.dev/learn/css/
+FE_03_04,freeCodeCamp: Responsive Web Design,CSS,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+FE_04_01,MDN: JavaScript Guide,JavaScript,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+FE_04_02,MDN: Dynamic scripting with JavaScript,JavaScript,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting
+FE_04_03,javascript.info,JavaScript,Medium,10,javascript.info,https://javascript.info/
+FE_04_04,freeCodeCamp: JavaScript Algorithms and Data Structures,JavaScript,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/
+FE_05_01,MDN: Command line crash course,CLI & Terminal Basics,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
+FE_05_02,GitHub Docs: About Git,CLI & Terminal Basics,Easy,6,GitHub,https://docs.github.com/en/get-started/learning-about-github/about-github
+FE_05_03,The Missing Semester: Shell,CLI & Terminal Basics,Medium,10,MIT,https://missing.csail.mit.edu/2020/course-shell/
+FE_05_04,freeCodeCamp: Command Line Basics,CLI & Terminal Basics,High,15,freeCodeCamp,https://www.freecodecamp.org/news/command-line-for-beginners/
+FE_06_01,Pro Git Book,Version Control (Git & GitHub),Beginner,3,Git,https://git-scm.com/book/en/v2
+FE_06_02,GitHub Skills: Introduction to GitHub,Version Control (Git & GitHub),Easy,6,GitHub,https://skills.github.com/
+FE_06_03,GitHub Docs: Git guides,Version Control (Git & GitHub),Medium,10,GitHub,https://docs.github.com/en/get-started/git-basics
+FE_06_04,Atlassian Git tutorials,Version Control (Git & GitHub),High,15,Atlassian,https://www.atlassian.com/git/tutorials
+FE_07_01,Pro Git Book,VCS Hosting,Beginner,3,Git,https://git-scm.com/book/en/v2
+FE_07_02,GitHub Skills: Introduction to GitHub,VCS Hosting,Easy,6,GitHub,https://skills.github.com/
+FE_07_03,GitHub Docs: Git guides,VCS Hosting,Medium,10,GitHub,https://docs.github.com/en/get-started/git-basics
+FE_07_04,Atlassian Git tutorials,VCS Hosting,High,15,Atlassian,https://www.atlassian.com/git/tutorials
+FE_08_01,npm: About npm,Package Managers,Beginner,3,npm,https://docs.npmjs.com/about-npm
+FE_08_02,npm: Getting started,Package Managers,Easy,6,npm,https://docs.npmjs.com/getting-started
+FE_08_03,pnpm: Motivation,Package Managers,Medium,10,pnpm,https://pnpm.io/motivation
+FE_08_04,Yarn: Getting Started,Package Managers,High,15,Yarn,https://yarnpkg.com/getting-started
+FE_09_01,Bootstrap Documentation,CSS Frameworks,Beginner,3,Bootstrap,https://getbootstrap.com/docs/5.3/getting-started/introduction/
+FE_09_02,Tailwind CSS Installation,CSS Frameworks,Easy,6,Tailwind CSS,https://tailwindcss.com/docs/installation
+FE_09_03,Material UI Introduction,CSS Frameworks,Medium,10,MUI,https://mui.com/material-ui/getting-started/
+FE_09_04,Bulma Documentation,CSS Frameworks,High,15,Bulma,https://bulma.io/documentation/
+FE_10_01,React Learn,JavaScript Frameworks,Beginner,3,React,https://react.dev/learn
+FE_10_02,Vue Guide,JavaScript Frameworks,Easy,6,Vue.js,https://vuejs.org/guide/introduction.html
+FE_10_03,Angular Tutorial,JavaScript Frameworks,Medium,10,Angular,https://angular.dev/tutorials/learn-angular
+FE_10_04,Svelte Tutorial,JavaScript Frameworks,High,15,Svelte,https://svelte.dev/tutorial/svelte/welcome-to-svelte
+FE_11_01,GitHub Copilot documentation,AI-Assisted Coding,Beginner,3,GitHub,https://docs.github.com/en/copilot
+FE_11_02,MDN: AI on the Web,AI-Assisted Coding,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/AI
+FE_11_03,Google: AI for Developers,AI-Assisted Coding,Medium,10,Google,https://ai.google.dev/
+FE_11_04,Microsoft Learn: Generative AI,AI-Assisted Coding,High,15,Microsoft,https://learn.microsoft.com/en-us/training/generative-ai/
+FE_12_01,GitHub Copilot documentation,Generative AI for Frontend,Beginner,3,GitHub,https://docs.github.com/en/copilot
+FE_12_02,MDN: AI on the Web,Generative AI for Frontend,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/AI
+FE_12_03,Google: AI for Developers,Generative AI for Frontend,Medium,10,Google,https://ai.google.dev/
+FE_12_04,Microsoft Learn: Generative AI,Generative AI for Frontend,High,15,Microsoft,https://learn.microsoft.com/en-us/training/generative-ai/
+FE_13_01,GitHub Copilot documentation,Implementing AI in Frontend,Beginner,3,GitHub,https://docs.github.com/en/copilot
+FE_13_02,MDN: AI on the Web,Implementing AI in Frontend,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/AI
+FE_13_03,Google: AI for Developers,Implementing AI in Frontend,Medium,10,Google,https://ai.google.dev/
+FE_13_04,Microsoft Learn: Generative AI,Implementing AI in Frontend,High,15,Microsoft,https://learn.microsoft.com/en-us/training/generative-ai/
+FE_14_01,ESLint Getting Started,Linters & formatters,Beginner,3,ESLint,https://eslint.org/docs/latest/use/getting-started
+FE_14_02,Prettier Docs,Linters & formatters,Easy,6,Prettier,https://prettier.io/docs/
+FE_14_03,Vite Guide,Linters & formatters,Medium,10,Vite,https://vite.dev/guide/
+FE_14_04,webpack Guides,Linters & formatters,High,15,webpack,https://webpack.js.org/guides/
+FE_15_01,ESLint Getting Started,Module Bundlers,Beginner,3,ESLint,https://eslint.org/docs/latest/use/getting-started
+FE_15_02,Prettier Docs,Module Bundlers,Easy,6,Prettier,https://prettier.io/docs/
+FE_15_03,Vite Guide,Module Bundlers,Medium,10,Vite,https://vite.dev/guide/
+FE_15_04,webpack Guides,Module Bundlers,High,15,webpack,https://webpack.js.org/guides/
+FE_16_01,MDN: HTTP overview,REST APIs,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+FE_16_02,MDN: Fetch API,REST APIs,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+FE_16_03,REST API Tutorial,REST APIs,Medium,10,RESTful API,https://restfulapi.net/
+FE_16_04,Postman: Learning Center,REST APIs,High,15,Postman,https://learning.postman.com/docs/getting-started/introduction/
+FE_17_01,MDN: HTTP authentication,Auth Strategies,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+FE_17_02,OWASP Authentication Cheat Sheet,Auth Strategies,Easy,6,OWASP,https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+FE_17_03,Auth0 Learn,Auth Strategies,Medium,10,Auth0,https://auth0.com/docs/get-started
+FE_17_04,Clerk Documentation,Auth Strategies,High,15,Clerk,https://clerk.com/docs
+FE_18_01,MDN: Testing,Testing & Debugging,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing
+FE_18_02,Jest Getting Started,Testing & Debugging,Easy,6,Jest,https://jestjs.io/docs/getting-started
+FE_18_03,Vitest Guide,Testing & Debugging,Medium,10,Vitest,https://vitest.dev/guide/
+FE_18_04,Playwright Introduction,Testing & Debugging,High,15,Playwright,https://playwright.dev/docs/intro
+FE_19_01,MDN: HTTP overview,Browser Web APIs,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+FE_19_02,MDN: Fetch API,Browser Web APIs,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+FE_19_03,REST API Tutorial,Browser Web APIs,Medium,10,RESTful API,https://restfulapi.net/
+FE_19_04,Postman: Learning Center,Browser Web APIs,High,15,Postman,https://learning.postman.com/docs/getting-started/introduction/
+FE_20_01,MDN: Web security,Web Security,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/Security
+FE_20_02,OWASP Top 10,Web Security,Easy,6,OWASP,https://owasp.org/www-project-top-ten/
+FE_20_03,OWASP Web Security Testing Guide,Web Security,Medium,10,OWASP,https://owasp.org/www-project-web-security-testing-guide/
+FE_20_04,web.dev: Learn Privacy,Web Security,High,15,web.dev,https://web.dev/learn/privacy/
+FE_21_01,Next.js Learn,Server-Side Rendering,Beginner,3,Next.js,https://nextjs.org/learn
+FE_21_02,Next.js: Rendering,Server-Side Rendering,Easy,6,Next.js,https://nextjs.org/docs/app/building-your-application/rendering
+FE_21_03,Nuxt Introduction,Server-Side Rendering,Medium,10,Nuxt,https://nuxt.com/docs/getting-started/introduction
+FE_21_04,Astro Tutorial,Server-Side Rendering,High,15,Astro,https://docs.astro.build/en/tutorial/0-introduction/
+FE_22_01,Astro Tutorial,Static Site Generators,Beginner,3,Astro,https://docs.astro.build/en/tutorial/0-introduction/
+FE_22_02,Eleventy Documentation,Static Site Generators,Easy,6,Eleventy,https://www.11ty.dev/docs/
+FE_22_03,Hugo Quick Start,Static Site Generators,Medium,10,Hugo,https://gohugo.io/getting-started/quick-start/
+FE_22_04,Jekyll Quickstart,Static Site Generators,High,15,Jekyll,https://jekyllrb.com/docs/
+FE_23_01,TypeScript Handbook,Type Checkers,Beginner,3,TypeScript,https://www.typescriptlang.org/docs/handbook/intro.html
+FE_23_02,TypeScript for JavaScript Programmers,Type Checkers,Easy,6,TypeScript,https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+FE_23_03,Flow Documentation,Type Checkers,Medium,10,Flow,https://flow.org/en/docs/
+FE_23_04,TypeScript Playground,Type Checkers,High,15,TypeScript,https://www.typescriptlang.org/play/
+FE_24_01,Vercel: Getting Started,Deployment,Beginner,3,Vercel,https://vercel.com/docs/getting-started-with-vercel
+FE_24_02,Netlify: Get started,Deployment,Easy,6,Netlify,https://docs.netlify.com/get-started/
+FE_24_03,GitHub Pages: Quickstart,Deployment,Medium,10,GitHub,https://docs.github.com/en/pages/quickstart
+FE_24_04,MDN: Publishing your website,Deployment,High,15,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+FE_25_01,Material Design,Design Systems,Beginner,3,Google,https://m3.material.io/
+FE_25_02,IBM Carbon Design System,Design Systems,Easy,6,IBM,https://carbondesignsystem.com/
+FE_25_03,Atlassian Design System,Design Systems,Medium,10,Atlassian,https://atlassian.design/
+FE_25_04,Shopify Polaris,Design Systems,High,15,Shopify,https://polaris.shopify.com/
+FE_26_01,web.dev: Learn Performance,Performance,Beginner,3,web.dev,https://web.dev/learn/performance/
+FE_26_02,MDN: Web performance,Performance,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/Performance
+FE_26_03,web.dev: Optimize resource loading,Performance,Medium,10,web.dev,https://web.dev/learn/performance/optimize-resource-loading/
+FE_26_04,Chrome DevTools Performance,Performance,High,15,Chrome,https://developer.chrome.com/docs/devtools/performance
+FE_27_01,MDN: Web Components,Web Components,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/API/Web_components
+FE_27_02,web.dev: Custom elements,Web Components,Easy,6,web.dev,https://web.dev/articles/custom-elements-v1
+FE_27_03,MDN: CustomElementRegistry,Web Components,Medium,10,MDN,https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry
+FE_27_04,web.dev: Shadow DOM,Web Components,High,15,web.dev,https://web.dev/articles/shadowdom-v1
+FE_28_01,GraphQL Learn,GraphQL,Beginner,3,GraphQL,https://graphql.org/learn/
+FE_28_02,Apollo GraphQL Tutorials,GraphQL,Easy,6,Apollo,https://www.apollographql.com/tutorials/
+FE_28_03,GraphQL.js Learn,GraphQL,Medium,10,GraphQL.js,https://www.graphql-js.org/docs/
+FE_28_04,How to GraphQL,GraphQL,High,15,How to GraphQL,https://www.howtographql.com/
+FE_29_01,MDN: Accessibility,Accessibility,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility
+FE_29_02,WAI Tutorials,Accessibility,Easy,6,W3C WAI,https://www.w3.org/WAI/tutorials/
+FE_29_03,web.dev: Learn Accessibility,Accessibility,Medium,10,web.dev,https://web.dev/learn/accessibility/
+FE_29_04,Deque University,Accessibility,High,15,Deque,https://dequeuniversity.com/resources/
+FE_30_01,MDN: Progressive web apps,Progressive Web Apps,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+FE_30_02,web.dev: Learn PWA,Progressive Web Apps,Easy,6,web.dev,https://web.dev/learn/pwa/
+FE_30_03,web.dev: PWA training,Progressive Web Apps,Medium,10,web.dev,https://web.dev/learn/pwa/
+FE_30_04,Workbox Documentation,Progressive Web Apps,High,15,Google,https://developer.chrome.com/docs/workbox/
+FE_31_01,React Native Getting Started,Mobile Apps,Beginner,3,React Native,https://reactnative.dev/docs/getting-started
+FE_31_02,Flutter Codelabs,Mobile Apps,Easy,6,Flutter,https://docs.flutter.dev/codelabs
+FE_31_03,Expo Tutorial,Mobile Apps,Medium,10,Expo,https://docs.expo.dev/tutorial/introduction/
+FE_31_04,Ionic React Quickstart,Mobile Apps,High,15,Ionic,https://ionicframework.com/docs/react/quickstart
+FE_32_01,Electron Quick Start,Desktop Applications in JavaScript,Beginner,3,Electron,https://www.electronjs.org/docs/latest/tutorial/quick-start
+FE_32_02,Tauri Getting Started,Desktop Applications in JavaScript,Easy,6,Tauri,https://tauri.app/start/
+FE_32_03,NW.js Getting Started,Desktop Applications in JavaScript,Medium,10,NW.js,https://nwjs.readthedocs.io/en/latest/For%20Users/Getting%20Started/
+FE_32_04,Electron Forge Tutorial,Desktop Applications in JavaScript,High,15,Electron Forge,https://www.electronforge.io/
+FE_33_01,Redux Essentials Tutorial,State Management (Redux/Zustand),Beginner,3,Redux,https://redux.js.org/tutorials/essentials/part-1-overview-concepts
+FE_33_02,Redux Toolkit Quick Start,State Management (Redux/Zustand),Easy,6,Redux Toolkit,https://redux-toolkit.js.org/tutorials/quick-start
+FE_33_03,Zustand: Getting Started,State Management (Redux/Zustand),Medium,10,Zustand,https://zustand.docs.pmnd.rs/getting-started/introduction
+FE_33_04,Recoil: Getting Started,State Management (Redux/Zustand),High,15,Recoil,https://recoiljs.org/docs/introduction/getting-started
+FE_34_01,Martin Fowler: Micro Frontends,Micro Frontends,Beginner,3,Martin Fowler,https://martinfowler.com/articles/micro-frontends.html
+FE_34_02,webpack: Module Federation,Micro Frontends,Easy,6,webpack,https://webpack.js.org/concepts/module-federation/
+FE_34_03,single-spa Documentation,Micro Frontends,Medium,10,single-spa,https://single-spa.js.org/docs/getting-started-overview/
+FE_34_04,Bit.dev Documentation,Micro Frontends,High,15,Bit,https://bit.dev/docs
+FE_35_01,GreatFrontEnd,Frontend System Design,Beginner,3,GreatFrontEnd,https://www.greatfrontend.com/
+FE_35_02,Frontend Interview Handbook,Frontend System Design,Easy,6,Frontend Interview Handbook,https://www.frontendinterviewhandbook.com/
+FE_35_03,patterns.dev,Frontend System Design,Medium,10,patterns.dev,https://www.patterns.dev/
+FE_35_04,roadmap.sh: Frontend Performance,Frontend System Design,High,15,roadmap.sh,https://roadmap.sh/frontend-performance
+FE_36_01,LeetCode Practice Platform,Frontend Interview Prep,Beginner,3,LeetCode,https://leetcode.com/
+FE_36_02,GeeksforGeeks Interview Questions,Frontend Interview Prep,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-interview-questions-and-answers/
+FE_36_03,HackerRank Practice,Frontend Interview Prep,Medium,10,HackerRank,https://www.hackerrank.com/
+FE_36_04,roadmap.sh Interview Guides,Frontend Interview Prep,High,15,roadmap.sh,https://roadmap.sh/guides

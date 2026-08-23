@@ -1,0 +1,57 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+JS_01_01,MDN: JavaScript Guide,JS Basics/Syntax,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+JS_01_02,javascript.info,JS Basics/Syntax,Easy,6,javascript.info,https://javascript.info/
+JS_01_03,W3Schools: JavaScript Tutorial,JS Basics/Syntax,Medium,10,W3Schools,https://www.w3schools.com/js/
+JS_01_04,freeCodeCamp: JavaScript Algorithms and Data Structures,JS Basics/Syntax,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/
+JS_02_01,MDN: Data Structures,Variables & Data Types,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures
+JS_02_02,javascript.info: Variables,Variables & Data Types,Easy,6,javascript.info,https://javascript.info/variables
+JS_02_03,W3Schools: JS Variables,Variables & Data Types,Medium,10,W3Schools,https://www.w3schools.com/js/js_variables.asp
+JS_02_04,GeeksforGeeks: JavaScript Data Types,Variables & Data Types,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-data-types/
+JS_03_01,MDN: Functions,Functions & Scope,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+JS_03_02,javascript.info: Function Basics,Functions & Scope,Easy,6,javascript.info,https://javascript.info/function-basics
+JS_03_03,W3Schools: JS Functions,Functions & Scope,Medium,10,W3Schools,https://www.w3schools.com/js/js_functions.asp
+JS_03_04,GeeksforGeeks: JavaScript Scope,Functions & Scope,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-scope/
+JS_04_01,MDN: Indexed Collections,Arrays & Objects,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
+JS_04_02,MDN: Working with Objects,Arrays & Objects,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
+JS_04_03,javascript.info: Array,Arrays & Objects,Medium,10,javascript.info,https://javascript.info/array
+JS_04_04,W3Schools: JS Objects,Arrays & Objects,High,15,W3Schools,https://www.w3schools.com/js/js_objects.asp
+JS_05_01,MDN: Document Object Model,DOM Manipulation,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+JS_05_02,javascript.info: Document,DOM Manipulation,Easy,6,javascript.info,https://javascript.info/document
+JS_05_03,W3Schools: JS HTML DOM,DOM Manipulation,Medium,10,W3Schools,https://www.w3schools.com/js/js_htmldom.asp
+JS_05_04,GeeksforGeeks: DOM,DOM Manipulation,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/dom-document-object-model/
+JS_06_01,MDN: Events,Events,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events
+JS_06_02,javascript.info: Introduction to Browser Events,Events,Easy,6,javascript.info,https://javascript.info/introduction-browser-events
+JS_06_03,W3Schools: JS Events,Events,Medium,10,W3Schools,https://www.w3schools.com/js/js_events.asp
+JS_06_04,GeeksforGeeks: JavaScript Events,Events,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-events/
+JS_07_01,MDN: JavaScript Guide,ES6+ Features,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+JS_07_02,javascript.info,ES6+ Features,Easy,6,javascript.info,https://javascript.info/
+JS_07_03,W3Schools: JS ES6,ES6+ Features,Medium,10,W3Schools,https://www.w3schools.com/js/js_es6.asp
+JS_07_04,freeCodeCamp: JavaScript Algorithms and Data Structures,ES6+ Features,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/
+JS_08_01,MDN: Asynchronous JavaScript,Asynchronous JS (Promises/Async-Await),Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS
+JS_08_02,javascript.info: Promise Basics,Asynchronous JS (Promises/Async-Await),Easy,6,javascript.info,https://javascript.info/promise-basics
+JS_08_03,javascript.info: Async/await,Asynchronous JS (Promises/Async-Await),Medium,10,javascript.info,https://javascript.info/async-await
+JS_08_04,W3Schools: JS Asynchronous,Asynchronous JS (Promises/Async-Await),High,15,W3Schools,https://www.w3schools.com/js/js_asynchronous.asp
+JS_09_01,MDN: Closures,Closures & Higher Order Functions,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+JS_09_02,javascript.info: Closure,Closures & Higher Order Functions,Easy,6,javascript.info,https://javascript.info/closure
+JS_09_03,GeeksforGeeks: Closure in JavaScript,Closures & Higher Order Functions,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/closure-in-javascript/
+JS_09_04,freeCodeCamp: JavaScript Algorithms and Data Structures,Closures & Higher Order Functions,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/
+JS_10_01,MDN: Debugging JavaScript,Error Handling,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
+JS_10_02,"javascript.info: Error Handling, try..catch",Error Handling,Easy,6,javascript.info,https://javascript.info/try-catch
+JS_10_03,W3Schools: JS Errors,Error Handling,Medium,10,W3Schools,https://www.w3schools.com/js/js_errors.asp
+JS_10_04,GeeksforGeeks: JavaScript Error Handling,Error Handling,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-error-handling/
+JS_11_01,MDN: JavaScript Modules,Modules (import/export),Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+JS_11_02,javascript.info: Modules Introduction,Modules (import/export),Easy,6,javascript.info,https://javascript.info/modules-intro
+JS_11_03,W3Schools: JS Modules,Modules (import/export),Medium,10,W3Schools,https://www.w3schools.com/js/js_modules.asp
+JS_11_04,GeeksforGeeks: JavaScript Modules,Modules (import/export),High,15,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-modules/
+JS_12_01,MDN: Working with JSON,JSON & Fetch API,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON
+JS_12_02,MDN: Fetch API,JSON & Fetch API,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+JS_12_03,javascript.info: Fetch,JSON & Fetch API,Medium,10,javascript.info,https://javascript.info/fetch
+JS_12_04,W3Schools: JS JSON,JSON & Fetch API,High,15,W3Schools,https://www.w3schools.com/js/js_json_intro.asp
+JS_13_01,patterns.dev,JavaScript Design Patterns,Beginner,3,patterns.dev,https://www.patterns.dev/
+JS_13_02,Refactoring.Guru: Design Patterns in JavaScript,JavaScript Design Patterns,Easy,6,Refactoring.Guru,https://refactoring.guru/design-patterns/javascript
+JS_13_03,GeeksforGeeks: JavaScript Design Patterns,JavaScript Design Patterns,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-design-patterns/
+JS_13_04,patterns.dev: Rendering Patterns,JavaScript Design Patterns,High,15,patterns.dev,https://www.patterns.dev/vanilla/
+JS_14_01,LeetCode Practice Platform,JavaScript Interview Prep,Beginner,3,LeetCode,https://leetcode.com/
+JS_14_02,GeeksforGeeks Interview Questions,JavaScript Interview Prep,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/javascript-interview-questions-and-answers/
+JS_14_03,HackerRank Practice,JavaScript Interview Prep,Medium,10,HackerRank,https://www.hackerrank.com/
+JS_14_04,roadmap.sh Interview Guides,JavaScript Interview Prep,High,15,roadmap.sh,https://roadmap.sh/guides

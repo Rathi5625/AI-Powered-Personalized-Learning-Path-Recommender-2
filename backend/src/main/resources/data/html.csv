@@ -1,0 +1,33 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+HTML_01_01,MDN: Introduction to HTML,HTML Basics,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content
+HTML_01_02,W3Schools: HTML Tutorial,HTML Basics,Easy,6,W3Schools,https://www.w3schools.com/html/
+HTML_01_03,freeCodeCamp: Responsive Web Design,HTML Basics,Medium,10,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+HTML_01_04,GeeksforGeeks: HTML,HTML Basics,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/html/
+HTML_02_01,MDN: HTML Elements Reference,Semantic HTML,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+HTML_02_02,web.dev: Learn HTML,Semantic HTML,Easy,6,web.dev,https://web.dev/learn/html/
+HTML_02_03,W3Schools: HTML5 Semantic Elements,Semantic HTML,Medium,10,W3Schools,https://www.w3schools.com/html/html5_semantic_elements.asp
+HTML_02_04,GeeksforGeeks: HTML Semantic Elements,Semantic HTML,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/html-semantic-elements/
+HTML_03_01,MDN: Web Forms Guide,Forms & Validation,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms
+HTML_03_02,MDN: Form Validation,Forms & Validation,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
+HTML_03_03,W3Schools: HTML Forms,Forms & Validation,Medium,10,W3Schools,https://www.w3schools.com/html/html_forms.asp
+HTML_03_04,GeeksforGeeks: HTML Forms,Forms & Validation,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/html-forms/
+HTML_04_01,MDN: HTML Table Basics,Tables,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
+HTML_04_02,W3Schools: HTML Tables,Tables,Easy,6,W3Schools,https://www.w3schools.com/html/html_tables.asp
+HTML_04_03,GeeksforGeeks: HTML Tables,Tables,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/html-tables/
+HTML_04_04,freeCodeCamp: Responsive Web Design,Tables,High,15,freeCodeCamp,https://www.freecodecamp.org/learn/2022/responsive-web-design/
+HTML_05_01,MDN: HTML Video and Audio Content,Multimedia (Audio/Video),Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
+HTML_05_02,W3Schools: HTML5 Video,Multimedia (Audio/Video),Easy,6,W3Schools,https://www.w3schools.com/html/html5_video.asp
+HTML_05_03,GeeksforGeeks: HTML Video and Audio,Multimedia (Audio/Video),Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/html-video-audio/
+HTML_05_04,MDN: Audio and Video Delivery,Multimedia (Audio/Video),High,15,MDN,https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Audio_and_video_delivery
+HTML_06_01,MDN: Web APIs,HTML5 APIs,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Web/API
+HTML_06_02,W3Schools: HTML5 Geolocation API,HTML5 APIs,Easy,6,W3Schools,https://www.w3schools.com/html/html5_geolocation.asp
+HTML_06_03,GeeksforGeeks: HTML5 APIs,HTML5 APIs,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/html5-apis/
+HTML_06_04,web.dev: Learn HTML,HTML5 APIs,High,15,web.dev,https://web.dev/learn/html/
+HTML_07_01,MDN: Accessibility,Accessibility in HTML,Beginner,3,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility
+HTML_07_02,WAI Tutorials,Accessibility in HTML,Easy,6,W3C WAI,https://www.w3.org/WAI/tutorials/
+HTML_07_03,web.dev: Learn Accessibility,Accessibility in HTML,Medium,10,web.dev,https://web.dev/learn/accessibility/
+HTML_07_04,Deque University,Accessibility in HTML,High,15,Deque,https://dequeuniversity.com/resources/
+HTML_08_01,Google Search Central: SEO Starter Guide,SEO Basics,Beginner,3,Google,https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+HTML_08_02,MDN: SEO,SEO Basics,Easy,6,MDN,https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/SEO
+HTML_08_03,Moz: Beginner's Guide to SEO,SEO Basics,Medium,10,Moz,https://moz.com/beginners-guide-to-seo
+HTML_08_04,GeeksforGeeks: SEO Introduction,SEO Basics,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/introduction-seo-search-engine-optimization/

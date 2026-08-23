@@ -1,0 +1,57 @@
+course_id,title,skill_tag,level,duration_hours,platform,link
+SD_01_01,roadmap.sh: System Design,System Design Basics,Beginner,3,roadmap.sh,https://roadmap.sh/system-design
+SD_01_02,GeeksforGeeks: System Design Tutorial,System Design Basics,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/system-design/system-design-tutorial/
+SD_01_03,System Design Primer (GitHub),System Design Basics,Medium,10,GitHub,https://github.com/donnemartin/system-design-primer
+SD_01_04,Educative: Grokking the System Design Interview,System Design Basics,High,15,Educative,https://www.educative.io/courses/grokking-the-system-design-interview
+SD_02_01,AWS Well-Architected Framework,Scalability Fundamentals,Beginner,3,AWS,https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+SD_02_02,Google Cloud Architecture Framework,Scalability Fundamentals,Easy,6,Google Cloud,https://cloud.google.com/architecture/framework
+SD_02_03,Microsoft Azure Architecture Center,Scalability Fundamentals,Medium,10,Microsoft,https://learn.microsoft.com/en-us/azure/architecture/
+SD_02_04,HighScalability Blog,Scalability Fundamentals,High,15,HighScalability,http://highscalability.com/
+SD_03_01,NGINX: HTTP Load Balancing,Load Balancing,Beginner,3,NGINX,https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
+SD_03_02,AWS: Elastic Load Balancing Docs,Load Balancing,Easy,6,AWS,https://docs.aws.amazon.com/elasticloadbalancing/
+SD_03_03,Cloudflare: Load Balancing,Load Balancing,Medium,10,Cloudflare,https://developers.cloudflare.com/load-balancing/
+SD_03_04,GeeksforGeeks: Load Balancer,Load Balancing,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/system-design/load-balancer-system-design-interview-question/
+SD_04_01,Redis University,Caching,Beginner,3,Redis,https://university.redis.io/
+SD_04_02,Redis Documentation,Caching,Easy,6,Redis,https://redis.io/docs/latest/
+SD_04_03,MDN: HTTP Caching,Caching,Medium,10,MDN,https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
+SD_04_04,web.dev: Browser caching,Caching,High,15,web.dev,https://web.dev/articles/http-cache
+SD_05_01,PostgreSQL High Availability,Databases at Scale,Beginner,3,PostgreSQL,https://www.postgresql.org/docs/current/high-availability.html
+SD_05_02,MongoDB Sharding,Databases at Scale,Easy,6,MongoDB,https://www.mongodb.com/docs/manual/sharding/
+SD_05_03,Redis Scaling,Databases at Scale,Medium,10,Redis,https://redis.io/docs/latest/operate/oss_and_stack/management/scaling/
+SD_05_04,AWS Well-Architected Framework,Databases at Scale,High,15,AWS,https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+SD_06_01,GeeksforGeeks: CAP Theorem,CAP Theorem & Consistency,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/cap-theorem-in-dbms/
+SD_06_02,IBM: CAP Theorem,CAP Theorem & Consistency,Easy,6,IBM,https://www.ibm.com/topics/cap-theorem
+SD_06_03,MongoDB: Replication,CAP Theorem & Consistency,Medium,10,MongoDB,https://www.mongodb.com/docs/manual/replication/
+SD_06_04,AWS Builders' Library,CAP Theorem & Consistency,High,15,AWS,https://aws.amazon.com/builders-library/
+SD_07_01,Martin Fowler: Microservices,Microservices Architecture,Beginner,3,Martin Fowler,https://martinfowler.com/articles/microservices.html
+SD_07_02,AWS: What are Microservices?,Microservices Architecture,Easy,6,AWS,https://aws.amazon.com/microservices/
+SD_07_03,Azure Architecture: Microservices,Microservices Architecture,Medium,10,Microsoft,https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
+SD_07_04,Google Cloud: Microservices Architecture,Microservices Architecture,High,15,Google Cloud,https://cloud.google.com/learn/what-is-microservices-architecture
+SD_08_01,RabbitMQ Tutorials,Message Queues,Beginner,3,RabbitMQ,https://www.rabbitmq.com/tutorials
+SD_08_02,Apache Kafka Quickstart,Message Queues,Easy,6,Apache Kafka,https://kafka.apache.org/quickstart
+SD_08_03,Redis Pub/Sub,Message Queues,Medium,10,Redis,https://redis.io/docs/latest/develop/interact/pubsub/
+SD_08_04,NATS by Example,Message Queues,High,15,NATS,https://natsbyexample.com/
+SD_09_01,REST API Tutorial,API Design & Gateways,Beginner,3,RESTful API,https://restfulapi.net/
+SD_09_02,GraphQL Learn,API Design & Gateways,Easy,6,GraphQL,https://graphql.org/learn/
+SD_09_03,Kong Gateway Documentation,API Design & Gateways,Medium,10,Kong,https://docs.konghq.com/gateway/latest/
+SD_09_04,AWS API Gateway Documentation,API Design & Gateways,High,15,AWS,https://docs.aws.amazon.com/apigateway/
+SD_10_01,MIT 6.824: Distributed Systems,Distributed Systems,Beginner,3,MIT,https://pdos.csail.mit.edu/6.824/
+SD_10_02,The Raft Consensus Algorithm,Distributed Systems,Easy,6,Raft,https://raft.github.io/
+SD_10_03,GeeksforGeeks: Distributed System,Distributed Systems,Medium,10,GeeksforGeeks,https://www.geeksforgeeks.org/introduction-to-distributed-system/
+SD_10_04,System Design Primer (GitHub),Distributed Systems,High,15,GitHub,https://github.com/donnemartin/system-design-primer
+SD_11_01,GeeksforGeeks: System Design Tutorial,High Level Design (HLD) Case Studies,Beginner,3,GeeksforGeeks,https://www.geeksforgeeks.org/system-design/system-design-tutorial/
+SD_11_02,System Design Primer (GitHub),High Level Design (HLD) Case Studies,Easy,6,GitHub,https://github.com/donnemartin/system-design-primer
+SD_11_03,ByteByteGo,High Level Design (HLD) Case Studies,Medium,10,ByteByteGo,https://bytebytego.com/
+SD_11_04,Educative: Grokking the System Design Interview,High Level Design (HLD) Case Studies,High,15,Educative,https://www.educative.io/courses/grokking-the-system-design-interview
+SD_12_01,Refactoring.Guru: Design Patterns,Low Level Design (LLD) & OOP Design Patterns,Beginner,3,Refactoring.Guru,https://refactoring.guru/design-patterns
+SD_12_02,GeeksforGeeks: Low Level Design Tutorial,Low Level Design (LLD) & OOP Design Patterns,Easy,6,GeeksforGeeks,https://www.geeksforgeeks.org/system-design/low-level-design-tutorial-learn-lld/
+SD_12_03,SourceMaking: Design Patterns,Low Level Design (LLD) & OOP Design Patterns,Medium,10,SourceMaking,https://sourcemaking.com/design_patterns
+SD_12_04,GeeksforGeeks: Software Design Patterns,Low Level Design (LLD) & OOP Design Patterns,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/software-design-patterns/
+SD_13_01,ByteByteGo,System Design Interview Prep,Beginner,3,ByteByteGo,https://bytebytego.com/
+SD_13_02,Educative: Grokking the System Design Interview,System Design Interview Prep,Easy,6,Educative,https://www.educative.io/courses/grokking-the-system-design-interview
+SD_13_03,System Design Primer (GitHub),System Design Interview Prep,Medium,10,GitHub,https://github.com/donnemartin/system-design-primer
+SD_13_04,GeeksforGeeks: System Design Interview Questions,System Design Interview Prep,High,15,GeeksforGeeks,https://www.geeksforgeeks.org/system-design/commonly-asked-system-design-interview-problems-questions/
+SD_14_01,HighScalability Blog,Real World Architectures,Beginner,3,HighScalability,http://highscalability.com/
+SD_14_02,AWS Architecture Center,Real World Architectures,Easy,6,AWS,https://aws.amazon.com/architecture/
+SD_14_03,Google Cloud Architecture Framework,Real World Architectures,Medium,10,Google Cloud,https://cloud.google.com/architecture/framework
+SD_14_04,Netflix Tech Blog,Real World Architectures,High,15,Netflix,https://netflixtechblog.com/
