@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { ArrowRight, AlertCircle, Compass } from 'lucide-react';
 import { useRegister } from '@/hooks/api/useAuth';
-import { Button, Input, Card, Eyebrow } from '@/components/common';
+import { Button, Input, PasswordInput, Card, Eyebrow } from '@/components/common';
 
 const registerSchema = z.object({
   fullName: z.string().min(2, 'Name must be at least 2 characters'),
@@ -93,9 +93,8 @@ export default function RegisterPage() {
               {...register('email')}
             />
 
-            <Input
+            <PasswordInput
               label="Password"
-              type="password"
               placeholder="At least 8 characters"
               error={errors.password?.message}
               {...register('password')}

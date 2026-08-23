@@ -6,7 +6,7 @@ import { z } from 'zod';
 import { ArrowRight, AlertCircle, Compass } from 'lucide-react';
 import { useLogin } from '@/hooks/api/useAuth';
 import { useAuthStore } from '@/store/useAuthStore';
-import { Button, Input, Card, Eyebrow } from '@/components/common';
+import { Button, Input, PasswordInput, Card, Eyebrow } from '@/components/common';
 
 const loginSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
@@ -103,9 +103,8 @@ export default function LoginPage() {
                   Forgot password?
                 </Link>
               </div>
-              <Input
+              <PasswordInput
                 label="Password"
-                type="password"
                 placeholder="••••••••"
                 error={errors.password?.message}
                 {...register('password')}

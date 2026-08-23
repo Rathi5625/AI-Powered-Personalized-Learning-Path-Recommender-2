@@ -1,6 +1,7 @@
 export { Button, buttonVariants } from './Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './Button';
-export { Input, TextArea, Select } from './Input';
+export { Input, PasswordInput, TextArea, Select } from './Input';
+export type { PasswordInputProps } from './Input';
 export { TagInput } from './TagInput';
 export { Card, Panel } from './Card';
 export { Eyebrow, HudReadout, HudFrame } from './Hud';

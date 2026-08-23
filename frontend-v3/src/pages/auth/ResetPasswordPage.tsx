@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { ArrowRight, AlertCircle, CheckCircle2, Compass } from 'lucide-react';
 import { useResetPassword } from '@/hooks/api/useAuth';
-import { Button, Input, Card, Eyebrow } from '@/components/common';
+import { Button, Input, PasswordInput, Card, Eyebrow } from '@/components/common';
 
 const schema = z.object({
   email: z.string().email('Please enter a valid email address'),
@@ -117,9 +117,8 @@ export default function ResetPasswordPage() {
               )}
             </div>
 
-            <Input
+            <PasswordInput
               label="New Password"
-              type="password"
               placeholder="At least 8 characters"
               error={errors.newPassword?.message}
               {...register('newPassword')}

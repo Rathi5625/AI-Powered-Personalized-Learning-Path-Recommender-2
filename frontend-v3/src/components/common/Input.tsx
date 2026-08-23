@@ -1,4 +1,5 @@
-import { forwardRef, useId } from 'react';
+import { forwardRef, useId, useState } from 'react';
+import { Eye, EyeOff } from 'lucide-react';
 import { cn } from '@/lib/cn';
 
 interface FieldProps {
@@ -48,6 +49,56 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   },
 );
 Input.displayName = 'Input';
+
+export interface PasswordInputProps extends Omit<InputProps, 'type'> {}
+
+export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
+  ({ label, error, hint, id, className, ...props }, ref) => {
+    const [showPassword, setShowPassword] = useState(false);
+    const generatedId = useId();
+    const fieldId = id ?? generatedId;
+
+    return (
+      <div className="flex flex-col gap-1.5">
+        {label && (
+          <label htmlFor={fieldId} className="text-sm font-medium text-text/90">
+            {label}
+          </label>
+        )}
+        <div className="relative">
+          <input
+            ref={ref}
+            id={fieldId}
+            type={showPassword ? 'text' : 'password'}
+            className={cn(fieldWrap(error), 'h-11 pr-10', className)}
+            aria-invalid={error ? true : undefined}
+            aria-describedby={error ? `${fieldId}-error` : undefined}
+            {...props}
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword((prev) => !prev)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-text transition-colors focus:outline-none"
+            aria-label={showPassword ? 'Hide password' : 'Show password'}
+          >
+            {showPassword ? (
+              <EyeOff className="h-4 w-4" />
+            ) : (
+              <Eye className="h-4 w-4" />
+            )}
+          </button>
+        </div>
+        {hint && !error && <p className="text-xs text-muted">{hint}</p>}
+        {error && (
+          <p id={`${fieldId}-error`} className="text-xs text-danger">
+            {error}
+          </p>
+        )}
+      </div>
+    );
+  },
+);
+PasswordInput.displayName = 'PasswordInput';
 
 export interface TextAreaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement>,
