@@ -64,7 +64,7 @@ public class AuthService {
         log.info("[AUTH] Successfully registered new user id={}", saved.getId());
 
         // Initialize default learner profile
-        profileService.createDefaultProfileForEmail(saved.getEmail());
+        profileService.createDefaultProfileForUser(saved);
 
         String token = generateJwtToken(saved);
         return new AuthResponse(token, EntityDtoMapper.toUserSummaryResponse(saved));

@@ -136,10 +136,10 @@ public class ProfileService {
     }
 
     @Transactional
-    public LearnerProfile createDefaultProfileForEmail(String email) {
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new ResourceNotFoundException("User", "email", email));
-
+    public LearnerProfile createDefaultProfileForUser(User user) {
+        if (user == null || user.getId() == null) {
+            return null;
+        }
         Optional<LearnerProfile> existing = profileRepository.findByUserId(user.getId());
         if (existing.isPresent()) {
             return existing.get();
@@ -149,5 +149,12 @@ public class ProfileService {
                 .user(user)
                 .build();
         return profileRepository.save(profile);
+    }
+
+    @Transactional
+    public LearnerProfile createDefaultProfileForEmail(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("User", "email", email));
+        return createDefaultProfileForUser(user);
     }
 }

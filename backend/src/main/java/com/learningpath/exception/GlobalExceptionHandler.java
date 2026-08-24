@@ -101,6 +101,20 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
     }
 
+    @ExceptionHandler(org.springframework.security.core.userdetails.UsernameNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleUsernameNotFoundException(org.springframework.security.core.userdetails.UsernameNotFoundException ex, HttpServletRequest request) {
+        log.warn("Authentication failed (user not found): {}", ex.getMessage());
+        ErrorResponse response = new ErrorResponse(
+                Instant.now(),
+                HttpStatus.UNAUTHORIZED.value(),
+                HttpStatus.UNAUTHORIZED.getReasonPhrase(),
+                "Invalid email or password",
+                request.getRequestURI(),
+                null
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+    }
+
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<ErrorResponse> handleAccessDeniedException(AccessDeniedException ex, HttpServletRequest request) {
         log.warn("Access denied for {}: {}", request.getRequestURI(), ex.getMessage());
@@ -118,11 +132,15 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGlobalException(Exception ex, HttpServletRequest request) {
         log.error("Unhandled exception processing request to {}", request.getRequestURI(), ex);
+        String msg = ex.getMessage();
+        if (msg == null || msg.isBlank()) {
+            msg = ex.getClass().getSimpleName();
+        }
         ErrorResponse response = new ErrorResponse(
                 Instant.now(),
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),
-                "An unexpected internal error occurred",
+                msg,
                 request.getRequestURI(),
                 null
         );

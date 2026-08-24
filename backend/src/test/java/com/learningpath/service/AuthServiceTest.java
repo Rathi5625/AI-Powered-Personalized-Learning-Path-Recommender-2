@@ -82,7 +82,7 @@ class AuthServiceTest {
         assertEquals("jwt-token-xyz", response.getToken());
         assertEquals("newuser@example.com", response.getUser().getEmail());
         assertEquals("New User", response.getUser().getFullName());
-        verify(profileService).createDefaultProfileForEmail("newuser@example.com");
+        verify(profileService).createDefaultProfileForUser(savedUser);
     }
 
     @Test
