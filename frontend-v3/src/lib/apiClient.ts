@@ -16,9 +16,6 @@ const PUBLIC_PATHS = [
   '/',
   '/login',
   '/register',
-  '/verify-otp',
-  '/forgot-password',
-  '/reset-password',
 ];
 
 export const api: AxiosInstance = axios.create({

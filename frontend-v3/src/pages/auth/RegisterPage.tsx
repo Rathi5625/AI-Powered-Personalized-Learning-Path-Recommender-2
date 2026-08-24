@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { ArrowRight, AlertCircle, Compass } from 'lucide-react';
 import { useRegister } from '@/hooks/api/useAuth';
+import { useAuthStore } from '@/store/useAuthStore';
 import { Button, Input, PasswordInput, Card, Eyebrow } from '@/components/common';
 
 const registerSchema = z.object({
@@ -17,6 +18,7 @@ type RegisterFormValues = z.infer<typeof registerSchema>;
 
 export default function RegisterPage() {
   const navigate = useNavigate();
+  const { setAuth } = useAuthStore();
   const registerMutation = useRegister();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -32,13 +34,11 @@ export default function RegisterPage() {
     setErrorMessage(null);
     try {
       const res = await registerMutation.mutateAsync(values);
-      // Registration requires email verification OTP
-      if (res.emailVerificationRequired || !res.token) {
-        navigate(`/verify-otp?email=${encodeURIComponent(values.email)}`, {
-          state: { email: values.email },
-        });
-      } else {
+      if (res.token && res.user) {
+        setAuth(res.token, res.user);
         navigate('/onboarding');
+      } else {
+        navigate('/login', { state: { registered: true } });
       }
     } catch (err: any) {
       setErrorMessage(

@@ -37,8 +37,7 @@ public final class EntityDtoMapper {
                 user.getId(),
                 user.getEmail(),
                 user.getFullName(),
-                user.getRole(),
-                user.isEmailVerified()
+                user.getRole()
         );
     }
 

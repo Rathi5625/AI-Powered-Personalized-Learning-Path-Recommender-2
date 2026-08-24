@@ -31,12 +31,6 @@ public class ApplicationReadyListener {
         String activeProfile = String.join(",", environment.getActiveProfiles());
         String importEnabled = environment.getProperty("app.import.enabled", "false");
 
-        String emailProvider = environment.getProperty("app.email.provider", "resend");
-        String apiKey = environment.getProperty("app.email.api-key", "");
-        String fromAddress = environment.getProperty("app.email.from-address", "onboarding@resend.dev");
-        String fromName = environment.getProperty("app.email.from-name", "AetherPath AI");
-        boolean apiKeyConfigured = apiKey != null && !apiKey.isBlank();
-
         log.info("""
                 
                 ======================================================================
@@ -45,19 +39,12 @@ public class ApplicationReadyListener {
                 Server Port              : {}
                 Active Profiles          : {}
                 CSV Import Enabled       : {}
-                Email Delivery Protocol  : HTTPS (Port 443)
-                Email Provider           : {}
-                API Key Configured       : {}
-                Email Sender             : {} <{}>
+                Authentication Mode      : Direct JWT (No OTP / No Email Verification)
                 ======================================================================
                 """,
                 port,
                 activeProfile.isEmpty() ? "default" : activeProfile,
-                importEnabled,
-                emailProvider,
-                apiKeyConfigured,
-                fromName,
-                fromAddress
+                importEnabled
         );
     }
 }

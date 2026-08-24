@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { ArrowRight, AlertCircle, Compass } from 'lucide-react';
+import { ArrowRight, AlertCircle, CheckCircle2, Compass } from 'lucide-react';
 import { useLogin } from '@/hooks/api/useAuth';
 import { useAuthStore } from '@/store/useAuthStore';
 import { Button, Input, PasswordInput, Card, Eyebrow } from '@/components/common';
@@ -22,6 +22,8 @@ export default function LoginPage() {
   const loginMutation = useLogin();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  const registeredNotice = (location.state as any)?.registered;
+
   const {
     register,
     handleSubmit,
@@ -34,13 +36,6 @@ export default function LoginPage() {
     setErrorMessage(null);
     try {
       const res = await loginMutation.mutateAsync(values);
-
-      if (res.emailVerificationRequired || !res.token) {
-        navigate(`/verify-otp?email=${encodeURIComponent(values.email)}`, {
-          state: { email: values.email },
-        });
-        return;
-      }
 
       if (res.token && res.user) {
         setAuth(res.token, res.user);
@@ -77,6 +72,13 @@ export default function LoginPage() {
         </div>
 
         <Card className="p-6 sm:p-8 shadow-panel border-line bg-surface/90 backdrop-blur-xl">
+          {registeredNotice && !errorMessage && (
+            <div className="mb-6 flex items-center gap-2.5 rounded-lg border border-ion/40 bg-ion/10 p-3 text-xs text-ion">
+              <CheckCircle2 className="h-4 w-4 shrink-0" />
+              <span>Registration successful! Please sign in to continue.</span>
+            </div>
+          )}
+
           {errorMessage && (
             <div className="mb-6 flex items-center gap-2.5 rounded-lg border border-danger/40 bg-danger/10 p-3 text-xs text-danger">
               <AlertCircle className="h-4 w-4 shrink-0" />
@@ -93,23 +95,12 @@ export default function LoginPage() {
               {...register('email')}
             />
 
-            <div>
-              <div className="flex items-center justify-between mb-1">
-                <span />
-                <Link
-                  to="/forgot-password"
-                  className="text-xs text-muted hover:text-ion transition-colors"
-                >
-                  Forgot password?
-                </Link>
-              </div>
-              <PasswordInput
-                label="Password"
-                placeholder="••••••••"
-                error={errors.password?.message}
-                {...register('password')}
-              />
-            </div>
+            <PasswordInput
+              label="Password"
+              placeholder="••••••••"
+              error={errors.password?.message}
+              {...register('password')}
+            />
 
             <Button
               type="submit"

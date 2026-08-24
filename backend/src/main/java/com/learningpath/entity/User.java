@@ -35,9 +35,6 @@ public class User {
     @Column(nullable = false)
     private Role role;
 
-    @Column(name = "email_verified", nullable = false)
-    private boolean emailVerified = false;
-
     @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt;
 
@@ -116,14 +113,6 @@ public class User {
         this.role = role;
     }
 
-    public boolean isEmailVerified() {
-        return emailVerified;
-    }
-
-    public void setEmailVerified(boolean emailVerified) {
-        this.emailVerified = emailVerified;
-    }
-
     public Instant getCreatedAt() {
         return createdAt;
     }
@@ -163,7 +152,6 @@ public class User {
         private String passwordHash;
         private String fullName;
         private Role role = Role.LEARNER;
-        private boolean emailVerified = false;
         private Instant createdAt;
         private Instant updatedAt;
 
@@ -192,11 +180,6 @@ public class User {
             return this;
         }
 
-        public Builder emailVerified(boolean emailVerified) {
-            this.emailVerified = emailVerified;
-            return this;
-        }
-
         public Builder createdAt(Instant createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -214,7 +197,6 @@ public class User {
             user.setPasswordHash(passwordHash);
             user.setFullName(fullName);
             user.setRole(role != null ? role : Role.LEARNER);
-            user.setEmailVerified(emailVerified);
             user.setCreatedAt(createdAt);
             user.setUpdatedAt(updatedAt);
             return user;

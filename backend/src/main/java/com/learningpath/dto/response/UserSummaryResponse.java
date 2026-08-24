@@ -9,17 +9,15 @@ public class UserSummaryResponse {
     private String email;
     private String fullName;
     private Role role;
-    private boolean emailVerified;
 
     public UserSummaryResponse() {
     }
 
-    public UserSummaryResponse(UUID id, String email, String fullName, Role role, boolean emailVerified) {
+    public UserSummaryResponse(UUID id, String email, String fullName, Role role) {
         this.id = id;
         this.email = email;
         this.fullName = fullName;
         this.role = role;
-        this.emailVerified = emailVerified;
     }
 
     public UUID getId() {
@@ -52,13 +50,5 @@ public class UserSummaryResponse {
 
     public void setRole(Role role) {
         this.role = role;
-    }
-
-    public boolean isEmailVerified() {
-        return emailVerified;
-    }
-
-    public void setEmailVerified(boolean emailVerified) {
-        this.emailVerified = emailVerified;
     }
 }

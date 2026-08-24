@@ -48,15 +48,11 @@ export interface UserSummary {
   email: string;
   fullName: string;
   role: Role;
-  emailVerified: boolean;
 }
 
 export interface AuthResponse {
   token?: string;
   user?: UserSummary;
-  emailVerificationRequired?: boolean;
-  email?: string;
-  message?: string;
 }
 
 // ---------- Skills & Courses ----------
