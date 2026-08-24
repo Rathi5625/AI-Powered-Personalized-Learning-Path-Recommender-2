@@ -10,6 +10,7 @@ import com.learningpath.entity.MentorContextType;
 import com.learningpath.entity.Skill;
 import com.learningpath.repository.AssessmentRepository;
 import com.learningpath.repository.CourseRepository;
+import com.learningpath.service.guardrail.TopicGuardrail;
 import com.learningpath.service.llm.LlmClient;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,14 @@ public class MentorService {
 
     @Transactional(readOnly = true)
     public MentorMessageResponse chatWithMentor(String email, MentorMessageRequest request) {
+        String userMessage = request.getMessage() != null ? request.getMessage().trim() : "";
+
+        // 1. Server-side guardrail check (saves LLM call and prevents jailbreaks / off-topic queries)
+        if (TopicGuardrail.isOffTopicOrJailbreak(userMessage)) {
+            log.info("Mentor chat intercepted by TopicGuardrail for user: {}", email);
+            return new MentorMessageResponse(TopicGuardrail.FRIENDLY_REFUSAL_MESSAGE);
+        }
+
         LearnerProfile profile = profileService.getProfileEntityByEmail(email);
         String sessionId = request.getSessionId() != null && !request.getSessionId().isBlank()
                 ? request.getSessionId().trim()
@@ -68,15 +77,20 @@ public class MentorService {
                 promptBuilder.append(t.role).append(": ").append(t.content).append("\n\n");
             }
         }
-        promptBuilder.append("User: ").append(request.getMessage()).append("\nAssistant:");
+        promptBuilder.append("User: ").append(userMessage).append("\nAssistant:");
 
         String userPrompt = promptBuilder.toString();
         log.debug("Sending mentor prompt for session {}: context={}", sessionId, request.getContextType());
 
         String reply = llmClient.generateChatCompletion(systemPrompt, userPrompt);
 
+        // Secondary check on LLM response in case of subtle evasion
+        if (TopicGuardrail.isOffTopicOrJailbreak(reply)) {
+            reply = TopicGuardrail.FRIENDLY_REFUSAL_MESSAGE;
+        }
+
         synchronized (history) {
-            history.add(new Turn("User", request.getMessage()));
+            history.add(new Turn("User", userMessage));
             history.add(new Turn("Assistant", reply));
             if (history.size() > 20) {
                 history.subList(0, history.size() - 20).clear();
@@ -104,6 +118,8 @@ public class MentorService {
             Course course = courseRepository.findById(contextId).orElse(null);
             if (course != null) {
                 return """
+                        %s
+                        
                         You are an expert, encouraging AI technical tutor and mentor dedicated to guiding the learner through the course:
                         Title: %s
                         Level: %s
@@ -114,7 +130,7 @@ public class MentorService {
                         
                         Your goal is to answer questions, break down complex concepts step-by-step with clean analogies and code snippets when helpful, and guide the student towards deep mastery.
                         Keep answers clear, approachable, and encouraging.
-                        """.formatted(course.getTitle(), course.getLevel(), course.getPlatform(), course.getDescription(), profileContext);
+                        """.formatted(TopicGuardrail.SCOPE_RESTRICTION_PROMPT, course.getTitle(), course.getLevel(), course.getPlatform(), course.getDescription(), profileContext);
             }
         }
 
@@ -128,6 +144,8 @@ public class MentorService {
                             .append("  Explanation: ").append(q.getExplanation()).append("\n");
                 }
                 return """
+                        %s
+                        
                         You are an expert AI mentor helping the student analyze their assessment on topic '%s' (Level: %s).
                         
                         %s
@@ -135,18 +153,20 @@ public class MentorService {
                         %s
                         
                         Help the learner understand any mistakes, explain the core computer science principles, provide intuitive mental models, and give actionable advice on what to study next.
-                        """.formatted(assessment.getTopic(), assessment.getLevel(), questionsSummary.toString(), profileContext);
+                        """.formatted(TopicGuardrail.SCOPE_RESTRICTION_PROMPT, assessment.getTopic(), assessment.getLevel(), questionsSummary.toString(), profileContext);
             }
         }
 
         return """
+                %s
+                
                 You are a world-class AI Career and Study Mentor for software engineers and technology learners.
                 
                 %s
                 
                 Provide personalized guidance on roadmaps, learning strategies, interview preparation, portfolio building, and technical architecture.
                 Be inspiring, practical, concise, and actionable.
-                """.formatted(profileContext);
+                """.formatted(TopicGuardrail.SCOPE_RESTRICTION_PROMPT, profileContext);
     }
 
     private static class Turn {

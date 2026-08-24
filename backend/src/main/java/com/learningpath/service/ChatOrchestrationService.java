@@ -3,11 +3,11 @@ package com.learningpath.service;
 import com.learningpath.dto.request.ChatRequest;
 import com.learningpath.dto.request.ProfileUpdateRequest;
 import com.learningpath.dto.response.ChatResponse;
-import com.learningpath.dto.response.LearnerProfileResponse;
 import com.learningpath.entity.LearnerProfile;
 import com.learningpath.entity.LearningPath;
 import com.learningpath.entity.PathStatus;
 import com.learningpath.repository.LearningPathRepository;
+import com.learningpath.service.guardrail.TopicGuardrail;
 import com.learningpath.service.llm.LlmClient;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,12 +46,18 @@ public class ChatOrchestrationService {
     @Transactional
     public ChatResponse processMessage(String userEmail, ChatRequest request) {
         String sessionId = request.getSessionId();
-        String userMessage = request.getMessage();
+        String userMessage = request.getMessage() != null ? request.getMessage().trim() : "";
+
+        // 1. Guardrail check to block jailbreak and off-topic requests
+        if (TopicGuardrail.isOffTopicOrJailbreak(userMessage)) {
+            log.info("Onboarding chat intercepted by TopicGuardrail for user: {}", userEmail);
+            return new ChatResponse(TopicGuardrail.FRIENDLY_REFUSAL_MESSAGE, false, null);
+        }
 
         List<String> history = sessionHistory.computeIfAbsent(sessionId, k -> new ArrayList<>());
         String historyText = String.join("\n", history);
 
-        // 1. Call LlmClient to extract structured intent
+        // 2. Call LlmClient to extract structured intent
         LlmClient.ParsedIntent intent = llmClient.extractIntent(userMessage, historyText);
 
         // Append to history
@@ -60,7 +66,7 @@ public class ChatOrchestrationService {
             history.remove(0);
         }
 
-        // 2. Update/create LearnerProfile
+        // 3. Update/create LearnerProfile
         boolean profileUpdated = false;
         LearnerProfile profile = profileService.getProfileEntityByEmail(userEmail);
 
@@ -88,7 +94,7 @@ public class ChatOrchestrationService {
             profile = profileService.getProfileEntityByEmail(userEmail);
         }
 
-        // 3. If enough info is present, trigger RecommendationService
+        // 4. If enough info is present, trigger RecommendationService
         UUID learningPathId = null;
         boolean pathGenerated = false;
 
@@ -115,10 +121,15 @@ public class ChatOrchestrationService {
             }
         }
 
-        // 4. Generate conversational reply
+        // 5. Generate conversational reply
         String profileSummary = String.format("Goal: %s, Level: %s, Style: %s",
                 profile.getCareerGoal(), profile.getExperienceLevel(), profile.getPreferredLearningStyle());
         String reply = llmClient.generateConversationalReply(userMessage, historyText, profileSummary, pathGenerated);
+
+        // Guardrail check on LLM response
+        if (TopicGuardrail.isOffTopicOrJailbreak(reply)) {
+            reply = TopicGuardrail.FRIENDLY_REFUSAL_MESSAGE;
+        }
 
         history.add("Assistant: " + reply);
 

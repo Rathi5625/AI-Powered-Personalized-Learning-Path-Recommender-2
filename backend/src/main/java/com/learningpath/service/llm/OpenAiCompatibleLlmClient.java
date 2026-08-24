@@ -59,7 +59,7 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
             return fallbackExtractIntent(userMessage);
         }
 
-        String systemPrompt = """
+        String systemPrompt = com.learningpath.service.guardrail.TopicGuardrail.SCOPE_RESTRICTION_PROMPT + "\n" + """
                 You are an intent extraction AI for a personalized learning path system.
                 Analyze the user's message and conversation history.
                 Extract the following JSON structure:
@@ -177,7 +177,7 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
             return "Thanks for sharing your goals! Tell me more about your experience level or specific skills you would like to master so I can generate the perfect learning path for you.";
         }
 
-        String systemPrompt = """
+        String systemPrompt = com.learningpath.service.guardrail.TopicGuardrail.SCOPE_RESTRICTION_PROMPT + "\n" + """
                 You are a supportive, friendly AI Learning Path Counselor.
                 Keep responses concise, engaging, and action-oriented (2-3 sentences).
                 Acknowledge what the user said, mention profile updates if applicable, and guide them on next steps.
