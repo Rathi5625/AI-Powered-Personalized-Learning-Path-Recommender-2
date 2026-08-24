@@ -30,14 +30,12 @@ public class ApplicationReadyListener {
         }
         String activeProfile = String.join(",", environment.getActiveProfiles());
         String importEnabled = environment.getProperty("app.import.enabled", "false");
-        String smtpEnabled = environment.getProperty("app.email.smtp-enabled", "false");
-        String smtpHost = environment.getProperty("app.mail.smtp-host", "smtp.gmail.com");
-        String smtpPort = environment.getProperty("app.mail.smtp-port", "587");
-        String smtpUser = environment.getProperty("app.mail.smtp-username", "");
-        String smtpPass = environment.getProperty("app.mail.smtp-password", "");
 
-        boolean userConfigured = smtpUser != null && !smtpUser.isBlank();
-        boolean passConfigured = smtpPass != null && !smtpPass.isBlank();
+        String emailProvider = environment.getProperty("app.email.provider", "resend");
+        String apiKey = environment.getProperty("app.email.api-key", "");
+        String fromAddress = environment.getProperty("app.email.from-address", "onboarding@resend.dev");
+        String fromName = environment.getProperty("app.email.from-name", "AetherPath AI");
+        boolean apiKeyConfigured = apiKey != null && !apiKey.isBlank();
 
         log.info("""
                 
@@ -47,21 +45,19 @@ public class ApplicationReadyListener {
                 Server Port              : {}
                 Active Profiles          : {}
                 CSV Import Enabled       : {}
-                SMTP Enabled             : {}
-                SMTP Host                : {}
-                SMTP Port                : {}
-                SMTP Username Configured : {}
-                SMTP Password Configured : {}
+                Email Delivery Protocol  : HTTPS (Port 443)
+                Email Provider           : {}
+                API Key Configured       : {}
+                Email Sender             : {} <{}>
                 ======================================================================
                 """,
                 port,
                 activeProfile.isEmpty() ? "default" : activeProfile,
                 importEnabled,
-                smtpEnabled,
-                smtpHost,
-                smtpPort,
-                userConfigured,
-                passConfigured
+                emailProvider,
+                apiKeyConfigured,
+                fromName,
+                fromAddress
         );
     }
 }

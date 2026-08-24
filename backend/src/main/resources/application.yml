@@ -51,9 +51,12 @@ app:
   auth:
     require-email-verification: ${REQUIRE_EMAIL_VERIFICATION:true}
   email:
-    smtp-enabled: ${SMTP_ENABLED:false}
+    provider: ${EMAIL_PROVIDER:resend}
+    api-key: ${RESEND_API_KEY:${EMAIL_PROVIDER_API_KEY:${EMAIL_API_KEY:${BREVO_API_KEY:}}}}
+    from-address: ${EMAIL_FROM_ADDRESS:${RESEND_FROM_ADDRESS:onboarding@resend.dev}}
+    from-name: ${EMAIL_FROM_NAME:AetherPath AI}
   mail:
-    smtp-host: ${SMTP_HOST:}
+    smtp-host: ${SMTP_HOST:smtp.gmail.com}
     smtp-port: ${SMTP_PORT:587}
     smtp-username: ${SMTP_USERNAME:}
     smtp-password: ${SMTP_PASSWORD:}
