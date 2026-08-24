@@ -39,23 +39,39 @@ public class EmailConfig {
             mailSender.setPort(port);
             mailSender.setUsername(username.trim());
             mailSender.setPassword(password != null ? password.trim() : "");
+            mailSender.setDefaultEncoding("UTF-8");
 
             Properties props = mailSender.getJavaMailProperties();
             props.put("mail.transport.protocol", "smtp");
             props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.starttls.enable", "true");
-            props.put("mail.smtp.starttls.required", "true");
+
+            if (port == 465) {
+                // Direct SSL/TLS (Port 465)
+                props.put("mail.smtp.ssl.enable", "true");
+                props.put("mail.smtp.socketFactory.port", "465");
+                props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+                props.put("mail.smtp.socketFactory.fallback", "false");
+            } else {
+                // STARTTLS (Default Port 587)
+                props.put("mail.smtp.starttls.enable", "true");
+                props.put("mail.smtp.starttls.required", "true");
+            }
+
             props.put("mail.smtp.ssl.protocols", "TLSv1.2 TLSv1.3");
-            props.put("mail.smtp.ssl.trust", host.trim());
+            props.put("mail.smtp.ssl.trust", "*");
             props.put("mail.smtp.connectiontimeout", "10000");
             props.put("mail.smtp.timeout", "10000");
             props.put("mail.smtp.writetimeout", "10000");
 
             log.info("===============================================================");
             log.info("Email service initialized: SmtpEmailService");
-            log.info("Dispatched to SMTP server: {}:{} using {}", host, port, username);
+            log.info("Dispatched to SMTP server: {}:{} using {}", host.trim(), port, username.trim());
             log.info("===============================================================");
             return new SmtpEmailService(mailSender, username.trim());
+        }
+
+        if (smtpEnabled) {
+            log.warn("SMTP_ENABLED is true, but required SMTP parameters (SMTP_HOST, SMTP_USERNAME, SMTP_PASSWORD) are incomplete. Falling back to ConsoleEmailService.");
         }
 
         log.info("===============================================================");

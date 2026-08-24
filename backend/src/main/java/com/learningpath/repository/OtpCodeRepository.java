@@ -21,7 +21,7 @@ public interface OtpCodeRepository extends JpaRepository<OtpCode, UUID> {
 
     List<OtpCode> findByUserAndPurposeAndUsedFalse(User user, OtpPurpose purpose);
 
-    @Modifying
+    @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Query("UPDATE OtpCode o SET o.used = true WHERE o.user = :user AND o.purpose = :purpose AND o.used = false")
     void invalidateExistingOtps(@Param("user") User user, @Param("purpose") OtpPurpose purpose);
 }
