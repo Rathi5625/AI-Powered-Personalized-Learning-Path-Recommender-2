@@ -36,7 +36,7 @@ public class OtpService {
 
     @Transactional
     public OtpCode createAndSendOtp(User user, OtpPurpose purpose) {
-        log.info("GENERATING OTP for {}", user.getEmail());
+        log.info("[OTP] Generating {} OTP for recipient={}", purpose, user.getEmail());
 
         // Invalidate prior unused OTPs for this user and purpose
         otpCodeRepository.invalidateExistingOtps(user, purpose);
@@ -46,13 +46,9 @@ public class OtpService {
 
         OtpCode otpCode = new OtpCode(user, code, purpose, expiresAt);
         OtpCode saved = otpCodeRepository.save(otpCode);
-        log.info("OTP SAVED, id={}, code={}", saved.getId(), saved.getCode());
+        log.info("[OTP] Persisted {} OTP record id={}", purpose, saved.getId());
 
-        // Unmissable console banner directly in OtpService
-        log.info("\n================================================\n[OTP] Code for {} ({}): {}\n================================================",
-                user.getEmail(), purpose, code);
-
-        log.info("CALLING EmailService.sendOtp for {}", user.getEmail());
+        log.info("[OTP] Triggering email delivery for recipient={}", user.getEmail());
         emailService.sendOtp(user.getEmail(), code, purpose);
 
         return saved;
@@ -60,7 +56,7 @@ public class OtpService {
 
     @Transactional
     public OtpCode validateAndConsumeOtp(User user, String code, OtpPurpose purpose) {
-        log.info("VALIDATING OTP for user={}, purpose={}, code={}", user.getEmail(), purpose, code);
+        log.info("[OTP] Validating {} OTP for recipient={}", purpose, user.getEmail());
         OtpCode otp = otpCodeRepository
                 .findTopByUserAndCodeAndPurposeAndUsedFalseAndExpiresAtAfterOrderByCreatedAtDesc(
                         user, code.trim(), purpose, Instant.now())
@@ -68,7 +64,7 @@ public class OtpService {
 
         otp.setUsed(true);
         OtpCode consumed = otpCodeRepository.save(otp);
-        log.info("OTP SUCCESSFULLY CONSUMED, id={}", consumed.getId());
+        log.info("[OTP] Successfully verified and consumed {} OTP record id={}", purpose, consumed.getId());
         return consumed;
     }
 }

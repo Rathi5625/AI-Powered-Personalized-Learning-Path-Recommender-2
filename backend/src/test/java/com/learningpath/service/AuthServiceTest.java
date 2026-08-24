@@ -11,6 +11,7 @@ import com.learningpath.entity.OtpPurpose;
 import com.learningpath.entity.Role;
 import com.learningpath.entity.User;
 import com.learningpath.exception.AccountNotVerifiedException;
+import com.learningpath.exception.ExternalServiceException;
 import com.learningpath.exception.InvalidRequestException;
 import com.learningpath.repository.UserRepository;
 import com.learningpath.security.JwtService;
@@ -131,6 +132,30 @@ class AuthServiceTest {
         assertNotNull(response);
         assertTrue(response.isEmailVerificationRequired());
         verify(otpService).createAndSendOtp(eq(savedUser), eq(OtpPurpose.EMAIL_VERIFICATION));
+    }
+
+    @Test
+    @DisplayName("Should propagate exception and fail registration if OTP delivery fails")
+    void shouldPropagateExceptionWhenOtpDeliveryFails() {
+        RegisterRequest request = new RegisterRequest("fail@example.com", "secret123", "Fail User");
+
+        when(userRepository.existsByEmail("fail@example.com")).thenReturn(false);
+        when(passwordEncoder.encode("secret123")).thenReturn("encodedPassword");
+
+        User savedUser = User.builder()
+                .id(UUID.randomUUID())
+                .email("fail@example.com")
+                .fullName("Fail User")
+                .passwordHash("encodedPassword")
+                .role(Role.LEARNER)
+                .emailVerified(false)
+                .build();
+
+        when(userRepository.save(any(User.class))).thenReturn(savedUser);
+        doThrow(new ExternalServiceException("Mail server down", 502))
+                .when(otpService).createAndSendOtp(eq(savedUser), eq(OtpPurpose.EMAIL_VERIFICATION));
+
+        assertThrows(ExternalServiceException.class, () -> authServiceWithOtp.register(request));
     }
 
     @Test

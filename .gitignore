@@ -1,0 +1,10 @@
+# Root gitignore
+.env
+.env.*
+*.log
+backend/target/
+frontend-v3/dist/
+frontend-v3/node_modules/
+.idea/
+.vscode/
+*.mjs.timestamp-*

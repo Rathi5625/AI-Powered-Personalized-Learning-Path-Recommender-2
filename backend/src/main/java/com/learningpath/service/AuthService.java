@@ -62,8 +62,9 @@ public class AuthService {
     @Transactional
     public AuthResponse register(RegisterRequest request) {
         String email = request.getEmail().toLowerCase().trim();
-        log.info("AUTH SERVICE REGISTER called for email={}", email);
+        log.info("[AUTH] Processing registration request for email: {}", email);
         if (userRepository.existsByEmail(email)) {
+            log.warn("[AUTH] Registration rejected: email already exists: {}", email);
             throw new InvalidRequestException("Email already registered: " + email);
         }
 
@@ -76,6 +77,7 @@ public class AuthService {
                 .build();
 
         User saved = userRepository.save(user);
+        log.info("[AUTH] Created user record id={}, emailVerified={}", saved.getId(), saved.isEmailVerified());
 
         // Initialize default learner profile
         profileService.createDefaultProfileForEmail(saved.getEmail());
@@ -83,10 +85,11 @@ public class AuthService {
         if (requireEmailVerification) {
             // Generate and send email verification OTP
             otpService.createAndSendOtp(saved, OtpPurpose.EMAIL_VERIFICATION);
+            log.info("[AUTH] Registration OTP generated and email dispatched for: {}", saved.getEmail());
             return new AuthResponse(true, saved.getEmail(), "Verification code sent to your email. Please verify to continue.");
         }
 
-        // If email verification is disabled (e.g. for simple local testing)
+        // If email verification is disabled
         String token = generateJwtToken(saved);
         return new AuthResponse(token, EntityDtoMapper.toUserSummaryResponse(saved));
     }
@@ -94,6 +97,7 @@ public class AuthService {
     @Transactional
     public AuthResponse verifyOtp(VerifyOtpRequest request) {
         String email = request.getEmail().toLowerCase().trim();
+        log.info("[AUTH] Processing OTP verification for email: {}", email);
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new InvalidRequestException("User not found with email: " + email));
 
@@ -101,6 +105,7 @@ public class AuthService {
 
         user.setEmailVerified(true);
         User updated = userRepository.save(user);
+        log.info("[AUTH] Email successfully verified for user id={}", updated.getId());
 
         String token = generateJwtToken(updated);
         return new AuthResponse(token, EntityDtoMapper.toUserSummaryResponse(updated));
@@ -109,6 +114,7 @@ public class AuthService {
     @Transactional
     public Map<String, String> resendOtp(ResendOtpRequest request) {
         String email = request.getEmail().toLowerCase().trim();
+        log.info("[AUTH] Processing OTP resend request for email: {}", email);
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new InvalidRequestException("User not found with email: " + email));
 
@@ -117,16 +123,22 @@ public class AuthService {
         }
 
         otpService.createAndSendOtp(user, OtpPurpose.EMAIL_VERIFICATION);
+        log.info("[AUTH] New verification OTP dispatched for email: {}", email);
         return Map.of("message", "Verification code resent successfully");
     }
 
     @Transactional
     public Map<String, String> forgotPassword(ForgotPasswordRequest request) {
         String email = request.getEmail().toLowerCase().trim();
+        log.info("[AUTH] Processing forgot-password request for email: {}", email);
         Optional<User> userOptional = userRepository.findByEmail(email);
 
-        // If user exists, issue PASSWORD_RESET OTP
-        userOptional.ifPresent(user -> otpService.createAndSendOtp(user, OtpPurpose.PASSWORD_RESET));
+        if (userOptional.isPresent()) {
+            log.info("[AUTH] User found for forgot-password. Dispatching password recovery OTP.");
+            otpService.createAndSendOtp(userOptional.get(), OtpPurpose.PASSWORD_RESET);
+        } else {
+            log.info("[AUTH] User not found for forgot-password. Returning generic message to prevent enumeration.");
+        }
 
         // Always return generic success message to prevent user enumeration
         return Map.of("message", "If an account with that email exists, a password reset code has been sent.");
@@ -135,6 +147,7 @@ public class AuthService {
     @Transactional
     public Map<String, String> resetPassword(ResetPasswordRequest request) {
         String email = request.getEmail().toLowerCase().trim();
+        log.info("[AUTH] Processing password reset for email: {}", email);
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new InvalidRequestException("Invalid verification code or email"));
 
@@ -142,6 +155,7 @@ public class AuthService {
 
         user.setPasswordHash(passwordEncoder.encode(request.getNewPassword()));
         userRepository.save(user);
+        log.info("[AUTH] Password successfully reset for user id={}", user.getId());
 
         return Map.of("message", "Password has been successfully reset. You may now log in.");
     }
@@ -149,6 +163,7 @@ public class AuthService {
     @Transactional(readOnly = true)
     public AuthResponse login(LoginRequest request) {
         String email = request.getEmail().toLowerCase().trim();
+        log.info("[AUTH] Processing login attempt for email: {}", email);
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(email, request.getPassword())
         );
@@ -157,10 +172,12 @@ public class AuthService {
                 .orElseThrow(() -> new InvalidRequestException("Invalid credentials"));
 
         if (requireEmailVerification && !user.isEmailVerified()) {
+            log.warn("[AUTH] Login rejected: user email is not verified: {}", email);
             throw new AccountNotVerifiedException("Please verify your email address before logging in.");
         }
 
         String token = generateJwtToken(user);
+        log.info("[AUTH] Login successful for user id={}", user.getId());
         return new AuthResponse(token, EntityDtoMapper.toUserSummaryResponse(user));
     }
 
