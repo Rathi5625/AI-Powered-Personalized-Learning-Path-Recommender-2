@@ -1,27 +1,65 @@
-"""One-off Supabase state check for PART 0 verification.
+"""Diagnostic script for database state check.
 Reports course/video counts and how many rows carry a content_embedding.
-Reads nothing from stdin; connection params inlined from backend/.env.
+Reads connection parameters from environment variables (DB_URL or DB_HOST/DB_USER/DB_PASSWORD)
+or automatically parses backend/.env if available.
 """
+import os
 import sys
+from pathlib import Path
 
 try:
     import psycopg2
 except ImportError:
-    print("psycopg2 not installed", file=sys.stderr)
+    print("psycopg2 not installed. Run 'pip install psycopg2-binary' to use this script.", file=sys.stderr)
     sys.exit(2)
 
-CONN = dict(
-    host="aws-0-ap-southeast-1.pooler.supabase.com",
-    port=5432,
-    dbname="postgres",
-    user="postgres.qdcifgxwpzohrgfkiurg",
-    password="@Parth@657825op@",
-    sslmode="require",
-    connect_timeout=15,
-)
+
+def load_env_file():
+    """Load key-value pairs from backend/.env into os.environ if present."""
+    env_path = Path(__file__).resolve().parent.parent / "backend" / ".env"
+    if env_path.exists():
+        with open(env_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    k = k.strip()
+                    v = v.strip().strip("'\"")
+                    if k and k not in os.environ:
+                        os.environ[k] = v
+
+
+def get_connection():
+    load_env_file()
+
+    db_url = os.environ.get("DB_URL")
+    if db_url:
+        return psycopg2.connect(db_url)
+
+    host = os.environ.get("DB_HOST", "aws-0-ap-southeast-1.pooler.supabase.com")
+    port = int(os.environ.get("DB_PORT", "5432"))
+    dbname = os.environ.get("DB_NAME", "postgres")
+    user = os.environ.get("DB_USERNAME", os.environ.get("DB_USER", "postgres.qdcifgxwpzohrgfkiurg"))
+    password = os.environ.get("DB_PASSWORD")
+
+    if not password:
+        print("Error: DB_PASSWORD (or DB_URL) environment variable is not set.", file=sys.stderr)
+        print("Please set DB_PASSWORD in your environment or in backend/.env", file=sys.stderr)
+        sys.exit(1)
+
+    return psycopg2.connect(
+        host=host,
+        port=port,
+        dbname=dbname,
+        user=user,
+        password=password,
+        sslmode=os.environ.get("DB_SSLMODE", "require"),
+        connect_timeout=15,
+    )
+
 
 def main():
-    conn = psycopg2.connect(**CONN)
+    conn = get_connection()
     cur = conn.cursor()
 
     # Does the courses table exist yet?
@@ -67,6 +105,7 @@ def main():
         print(f"  [{rt}] {title!r} via {plat}")
 
     conn.close()
+
 
 if __name__ == "__main__":
     main()
