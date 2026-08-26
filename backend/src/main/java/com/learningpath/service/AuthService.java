@@ -70,7 +70,7 @@ public class AuthService {
         return new AuthResponse(token, EntityDtoMapper.toUserSummaryResponse(saved));
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public AuthResponse login(LoginRequest request) {
         String email = request.getEmail().toLowerCase().trim();
         log.info("[AUTH] Processing login attempt for email: {}", email);
@@ -80,6 +80,9 @@ public class AuthService {
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new InvalidRequestException("Invalid credentials"));
+
+        // Self-healing guarantee: ensure learner profile exists for the authenticated user
+        profileService.createDefaultProfileForUser(user);
 
         String token = generateJwtToken(user);
         log.info("[AUTH] Login successful for user id={}", user.getId());

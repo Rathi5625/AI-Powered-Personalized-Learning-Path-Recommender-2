@@ -47,14 +47,14 @@ public class ProfileService {
         this.embeddingClient = embeddingClient;
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public LearnerProfileResponse getProfileByEmail(String email) {
         LearnerProfile profile = profileRepository.findByUserEmailWithDetails(email)
                 .orElseGet(() -> createDefaultProfileForEmail(email));
         return EntityDtoMapper.toLearnerProfileResponse(profile);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public LearnerProfile getProfileEntityByEmail(String email) {
         return profileRepository.findByUserEmailWithDetails(email)
                 .orElseGet(() -> createDefaultProfileForEmail(email));

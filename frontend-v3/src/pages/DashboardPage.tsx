@@ -17,7 +17,7 @@ export default function DashboardPage() {
   const [mentorQuickInput, setMentorQuickInput] = useState('');
 
   if (isLoading) return <div className="flex min-h-[70vh] items-center justify-center"><LoadingSpinner label="Calibrating Dashboard Telemetry..." /></div>;
-  if (isError || !dashboard) return <div className="mx-auto max-w-4xl p-6"><ErrorState title="Telemetry Connection Failed" message="Could not load your learning trajectory data. Please try again." onRetry={() => refetch()} /></div>;
+  if (isError || !dashboard) return <div className="mx-auto max-w-4xl p-6"><ErrorState title="Unable to Load Learning Progress" message="Could not load your curriculum trajectory. Please check your network connection and try again." onRetry={() => refetch()} /></div>;
 
   const { completedCount = 0, inProgressCount = 0, totalMilestones = 0, skillsGained = [], currentPath, nextRecommendedMilestone } = dashboard;
   const progressPercent = totalMilestones > 0 ? Math.round((completedCount / totalMilestones) * 100) : 0;
