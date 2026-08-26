@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    @apply bg-void text-text font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-sans text-text;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ion/60 ring-offset-2 ring-offset-void;
+  }
+
+  ::selection {
+    background: rgba(15, 148, 136, 0.18);
+    color: #132229;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f6f8f8;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c7d5d5;
+    border-radius: 999px;
+    border: 2px solid #f6f8f8;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9fb7b7;
+  }
+}
+
+@layer components {
+  .hud-label {
+    @apply font-mono text-hud uppercase text-muted;
+  }
+
+  .eyebrow {
+    @apply font-mono text-eyebrow uppercase text-ion;
+  }
+
+  .bg-blueprint {
+    @apply bg-grid-faint bg-grid;
+  }
+
+  .surface-card {
+    @apply rounded-card border border-line bg-surface shadow-panel;
+  }
+
+  .signalyst-feature {
+    background-image: theme('backgroundImage.signalyst-feature');
+  }
+
+  .knowledge-core-card {
+    height: clamp(360px, 68vh, 680px);
+  }
+
+  .hud-corner::before,
+  .hud-corner::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: rgba(138, 151, 157, 0.5);
+    border-style: solid;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .scanline {
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+}
