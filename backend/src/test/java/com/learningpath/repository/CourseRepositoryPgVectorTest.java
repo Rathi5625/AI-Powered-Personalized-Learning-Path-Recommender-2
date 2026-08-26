@@ -43,14 +43,14 @@ class CourseRepositoryPgVectorTest {
     @Test
     @DisplayName("Should find courses ordered by vector embedding cosine similarity")
     void shouldFindCoursesByEmbeddingSimilarity() {
-        float[] queryVector = new float[1536];
+        float[] queryVector = new float[2048];
         queryVector[0] = 1.0f;
 
-        float[] similarVector = new float[1536];
+        float[] similarVector = new float[2048];
         similarVector[0] = 0.95f;
         similarVector[1] = 0.05f;
 
-        float[] distantVector = new float[1536];
+        float[] distantVector = new float[2048];
         distantVector[10] = 1.0f;
 
         Course courseSimilar = Course.builder()

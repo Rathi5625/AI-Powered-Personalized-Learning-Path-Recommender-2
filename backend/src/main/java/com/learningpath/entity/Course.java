@@ -66,7 +66,7 @@ public class Course {
 
     @Convert(converter = VectorConverter.class)
     @org.hibernate.annotations.ColumnTransformer(write = "?::vector", read = "content_embedding::text")
-    @Column(name = "content_embedding", columnDefinition = "vector(1536)")
+    @Column(name = "content_embedding", columnDefinition = "vector(2048)")
     private float[] contentEmbedding;
 
     @Column(name = "created_at", nullable = false, updatable = false)

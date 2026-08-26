@@ -51,7 +51,7 @@ public class LearnerProfile {
 
     @Convert(converter = VectorConverter.class)
     @org.hibernate.annotations.ColumnTransformer(write = "?::vector", read = "goal_embedding::text")
-    @Column(name = "goal_embedding", columnDefinition = "vector(1536)")
+    @Column(name = "goal_embedding", columnDefinition = "vector(2048)")
     private float[] goalEmbedding;
 
     @Enumerated(EnumType.STRING)

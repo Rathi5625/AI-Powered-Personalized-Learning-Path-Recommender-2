@@ -24,4 +24,12 @@ public interface LlmClient {
     String generateConversationalReply(String userMessage, String conversationHistory, String profileSummary, boolean pathGenerated);
 
     String generateChatCompletion(String systemPrompt, String userPrompt);
+
+    default String getModel() {
+        return "unknown";
+    }
+
+    default boolean isConfigured() {
+        return false;
+    }
 }

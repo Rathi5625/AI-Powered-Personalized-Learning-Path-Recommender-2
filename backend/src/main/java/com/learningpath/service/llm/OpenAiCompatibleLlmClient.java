@@ -281,4 +281,14 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
         boolean ready = message.length() > 10;
         return new ParsedIntent(message, interests, level, style, ready);
     }
+
+    @Override
+    public String getModel() {
+        return model;
+    }
+
+    @Override
+    public boolean isConfigured() {
+        return !apiKey.isBlank() && !"mock-key".equalsIgnoreCase(apiKey) && !"nvapi-your_nvidia_api_key".equalsIgnoreCase(apiKey);
+    }
 }

@@ -32,6 +32,6 @@ app:
     model: text-embedding-3-small
     base-url: https://api.openai.com/v1
     timeout-seconds: 15
-    dimension: 1536
+    dimension: 2048
   recommendation:
     max-milestones: 12

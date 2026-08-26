@@ -264,7 +264,7 @@ public class CsvImportRunner implements CommandLineRunner {
 
     private float[] embedSafely(String text, String label) {
         try {
-            float[] embedding = embeddingClient.generateEmbedding(text);
+            float[] embedding = embeddingClient.generatePassageEmbedding(text);
             Thread.sleep(EMBEDDING_DELAY_MS);
             return embedding;
         } catch (InterruptedException ie) {

@@ -36,16 +36,16 @@ app:
   cors:
     allowed-origins: ${CORS_ALLOWED_ORIGINS}
   llm:
-    api-key: ${LLM_API_KEY}
-    model: ${LLM_MODEL}
-    base-url: ${LLM_BASE_URL}
+    api-key: ${LLM_API_KEY:${NVIDIA_API_KEY:}}
+    model: ${LLM_MODEL:${NVIDIA_LLM_MODEL:meta/llama-3.1-8b-instruct}}
+    base-url: ${LLM_BASE_URL:${NVIDIA_BASE_URL:https://integrate.api.nvidia.com/v1}}
     timeout-seconds: 15
   embedding:
-    api-key: ${EMBEDDING_API_KEY}
-    model: ${EMBEDDING_MODEL}
-    base-url: ${EMBEDDING_BASE_URL}
+    api-key: ${EMBEDDING_API_KEY:${NVIDIA_API_KEY:}}
+    model: ${EMBEDDING_MODEL:${NVIDIA_EMBEDDING_MODEL:nvidia/nemotron-3-embed-1b}}
+    base-url: ${EMBEDDING_BASE_URL:${NVIDIA_BASE_URL:https://integrate.api.nvidia.com/v1}}
     timeout-seconds: 15
-    dimension: 1536
+    dimension: ${EMBEDDING_DIMENSION:2048}
   recommendation:
     max-milestones: 12
   import:

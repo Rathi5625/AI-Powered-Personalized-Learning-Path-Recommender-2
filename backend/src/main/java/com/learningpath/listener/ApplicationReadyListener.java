@@ -31,6 +31,12 @@ public class ApplicationReadyListener {
         String activeProfile = String.join(",", environment.getActiveProfiles());
         String importEnabled = environment.getProperty("app.import.enabled", "false");
 
+        String embeddingModel = environment.getProperty("app.embedding.model", "nvidia/nemotron-3-embed-1b");
+        String embeddingDim = environment.getProperty("app.embedding.dimension", "2048");
+        String llmModel = environment.getProperty("app.llm.model", "meta/llama-3.1-8b-instruct");
+        boolean hasEmbeddingKey = environment.getProperty("app.embedding.api-key") != null && !environment.getProperty("app.embedding.api-key").isBlank();
+        boolean hasLlmKey = environment.getProperty("app.llm.api-key") != null && !environment.getProperty("app.llm.api-key").isBlank();
+
         log.info("""
                 
                 ======================================================================
@@ -40,11 +46,19 @@ public class ApplicationReadyListener {
                 Active Profiles          : {}
                 CSV Import Enabled       : {}
                 Authentication Mode      : Direct JWT (No OTP / No Email Verification)
+                AI Provider              : NVIDIA NIM
+                LLM Configured           : {} (Model: {})
+                Embedding Configured     : {} (Model: {}, Dimension: {})
                 ======================================================================
                 """,
                 port,
                 activeProfile.isEmpty() ? "default" : activeProfile,
-                importEnabled
+                importEnabled,
+                hasLlmKey,
+                llmModel,
+                hasEmbeddingKey,
+                embeddingModel,
+                embeddingDim
         );
     }
 }
