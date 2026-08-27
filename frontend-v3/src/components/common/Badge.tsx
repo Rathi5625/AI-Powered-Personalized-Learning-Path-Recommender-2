@@ -71,20 +71,23 @@ const levelTone: Record<CourseLevel, 'success' | 'ion' | 'ember' | 'danger'> = {
   HIGH: 'danger',
 };
 
-export function LevelBadge({ level }: { level: CourseLevel }) {
-  const labels: Record<CourseLevel, string> = {
+export function LevelBadge({ level }: { level?: CourseLevel | string | null }) {
+  const labels: Record<string, string> = {
     BEGINNER: 'Beginner',
     EASY: 'Easy',
     MEDIUM: 'Medium',
     HIGH: 'Advanced',
   };
-  return <Badge tone={levelTone[level]}>{labels[level]}</Badge>;
+  const tone = (level && (levelTone as any)[level]) || 'ion';
+  const label = (level && labels[level]) || (level ? String(level) : 'Beginner');
+  return <Badge tone={tone}>{label}</Badge>;
 }
 
-export function ResourceTypeBadge({ type }: { type: ResourceType }) {
+export function ResourceTypeBadge({ type }: { type?: ResourceType | string | null }) {
+  const isVideo = type === 'VIDEO';
   return (
-    <Badge tone={type === 'VIDEO' ? 'ember' : 'ion'}>
-      {type === 'VIDEO' ? 'Video' : 'Course'}
+    <Badge tone={isVideo ? 'ember' : 'ion'}>
+      {isVideo ? 'Video' : 'Course'}
     </Badge>
   );
 }
