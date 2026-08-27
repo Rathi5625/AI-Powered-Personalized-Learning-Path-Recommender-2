@@ -28,6 +28,9 @@ class HealthControllerTest {
     @Mock
     private EmbeddingClient embeddingClient;
 
+    @Mock
+    private javax.sql.DataSource dataSource;
+
     @InjectMocks
     private HealthController healthController;
 
