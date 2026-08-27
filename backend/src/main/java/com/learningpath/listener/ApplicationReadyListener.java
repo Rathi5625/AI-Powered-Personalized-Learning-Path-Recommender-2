@@ -31,9 +31,9 @@ public class ApplicationReadyListener {
         String activeProfile = String.join(",", environment.getActiveProfiles());
         String importEnabled = environment.getProperty("app.import.enabled", "false");
 
-        String embeddingModel = environment.getProperty("app.embedding.model", "nvidia/nemotron-3-embed-1b");
+        String embeddingModel = environment.getProperty("app.embedding.model", "nvidia/llama-nemotron-embed-vl-1b-v2");
         String embeddingDim = environment.getProperty("app.embedding.dimension", "2048");
-        String llmModel = environment.getProperty("app.llm.model", "meta/llama-3.1-8b-instruct");
+        String llmModel = environment.getProperty("app.llm.model", "nvidia/nemotron-3-super-120b-a12b");
         boolean hasEmbeddingKey = environment.getProperty("app.embedding.api-key") != null && !environment.getProperty("app.embedding.api-key").isBlank();
         boolean hasLlmKey = environment.getProperty("app.llm.api-key") != null && !environment.getProperty("app.llm.api-key").isBlank();
 

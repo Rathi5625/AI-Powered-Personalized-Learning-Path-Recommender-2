@@ -39,7 +39,7 @@ AetherPath is an intelligent curriculum generation and mentorship platform desig
 - **Forms & Validation**: React Hook Form, Zod
 
 ### LLM & Embedding Setup
-The backend interfaces with OpenAI-compatible chat completion (`/chat/completions`) and embedding (`/embeddings`) endpoints. By default, it connects to **NVIDIA NIM** (`https://integrate.api.nvidia.com/v1`) using `meta/llama-3.1-8b-instruct` and `nvidia/nv-embedqa-e5-v5`, but can be swapped to OpenAI or any compatible provider via environment variables alone.
+The backend interfaces with OpenAI-compatible chat completion (`/chat/completions`) and embedding (`/embeddings`) endpoints. By default, it connects to **NVIDIA NIM** (`https://integrate.api.nvidia.com/v1`) using `nvidia/nemotron-3-super-120b-a12b` for chat/reasoning and `nvidia/llama-nemotron-embed-vl-1b-v2` (dimension: 2048) for embeddings, but can be swapped to OpenAI or any compatible provider via environment variables alone.
 
 ---
 
@@ -174,11 +174,12 @@ The backend interfaces with OpenAI-compatible chat completion (`/chat/completion
 | `JWT_SECRET` | Secret key for signing stateless JWT tokens | `min_32_char_random_secret` |
 | `JWT_EXPIRATION_MS` | JWT expiration duration in milliseconds | `86400000` (24 hours) |
 | `LLM_API_KEY` | API key for LLM chat completion | `nvapi-...` |
-| `LLM_MODEL` | Model identifier for chat completions | `meta/llama-3.1-8b-instruct` |
+| `LLM_MODEL` | Model identifier for chat completions | `nvidia/nemotron-3-super-120b-a12b` |
 | `LLM_BASE_URL` | Base URL for OpenAI-compatible LLM endpoint | `https://integrate.api.nvidia.com/v1` |
 | `EMBEDDING_API_KEY` | API key for text embedding generation | `nvapi-...` |
-| `EMBEDDING_MODEL` | Model identifier for embeddings | `nvidia/nv-embedqa-e5-v5` |
+| `EMBEDDING_MODEL` | Model identifier for embeddings | `nvidia/llama-nemotron-embed-vl-1b-v2` |
 | `EMBEDDING_BASE_URL` | Base URL for OpenAI-compatible embedding endpoint | `https://integrate.api.nvidia.com/v1` |
+| `EMBEDDING_DIMENSION` | Vector embedding dimension matching pgvector column | `2048` |
 | `SERVER_PORT` | Port the Spring Boot server listens on | `8080` |
 | `CORS_ALLOWED_ORIGINS` | Allowed CORS origins for browser requests | `http://localhost:5173` |
 | `REQUIRE_EMAIL_VERIFICATION` | Require OTP verification before allowing login | `true` |

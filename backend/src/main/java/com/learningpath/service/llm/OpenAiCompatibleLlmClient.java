@@ -230,7 +230,24 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
                     .onStatus(HttpStatusCode::is4xxClientError, clientResponse ->
                             clientResponse.bodyToMono(String.class)
                                     .flatMap(body -> {
-                                        log.error("LLM client 4xx error: {}", body);
+                                        int code = clientResponse.statusCode().value();
+                                        if (code == 410) {
+                                            log.error("LLM API error: HTTP 410 - The model '{}' has reached end of life. Please configure a supported NVIDIA model (e.g. nvidia/nemotron-3-super-120b-a12b). Details: {}", model, body);
+                                        } else if (code == 401 || code == 403) {
+                                            log.error("LLM API error: HTTP {} - Authentication/Authorization failed. Verify LLM_API_KEY/NVIDIA_API_KEY.", code);
+                                        } else if (code == 404) {
+                                            log.error("LLM API error: HTTP 404 - Model endpoint not found for model '{}'. Details: {}", model, body);
+                                        } else if (code == 429) {
+                                            log.error("LLM API error: HTTP 429 - Rate limit / quota exceeded. Details: {}", body);
+                                        } else {
+                                            log.error("LLM API client error: HTTP {} - {}", code, body);
+                                        }
+                                        return clientResponse.createException();
+                                    }))
+                    .onStatus(HttpStatusCode::is5xxServerError, clientResponse ->
+                            clientResponse.bodyToMono(String.class)
+                                    .flatMap(body -> {
+                                        log.error("LLM API server error: HTTP {} - {}", clientResponse.statusCode().value(), body);
                                         return clientResponse.createException();
                                     }))
                     .bodyToMono(String.class)
@@ -243,7 +260,7 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
             return root.path("choices").get(0).path("message").path("content").asText();
         } catch (WebClientResponseException e) {
             log.error("LLM WebClient response exception: status={}", e.getStatusCode());
-            throw new ExternalServiceException("LLM service returned error: " + e.getMessage(), e, e.getStatusCode().value());
+            throw new ExternalServiceException("LLM service returned error (HTTP " + e.getStatusCode().value() + "): " + e.getMessage(), e, e.getStatusCode().value());
         } catch (Exception e) {
             log.error("LLM call failed: {}", e.getMessage());
             throw new ExternalServiceException("Failed to communicate with LLM service: " + e.getMessage(), e, 502);

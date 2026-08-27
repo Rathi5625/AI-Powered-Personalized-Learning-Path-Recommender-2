@@ -47,9 +47,9 @@ class HealthControllerTest {
     @DisplayName("Should return AI health diagnostics with model and dimensions")
     void shouldReturnAiHealthDiagnostics() throws Exception {
         when(llmClient.isConfigured()).thenReturn(true);
-        when(llmClient.getModel()).thenReturn("meta/llama-3.1-8b-instruct");
+        when(llmClient.getModel()).thenReturn("nvidia/nemotron-3-super-120b-a12b");
         when(embeddingClient.isConfigured()).thenReturn(true);
-        when(embeddingClient.getModel()).thenReturn("nvidia/nemotron-3-embed-1b");
+        when(embeddingClient.getModel()).thenReturn("nvidia/llama-nemotron-embed-vl-1b-v2");
         when(embeddingClient.getDimension()).thenReturn(2048);
 
         mockMvc.perform(get("/api/health/ai"))
@@ -57,9 +57,9 @@ class HealthControllerTest {
                 .andExpect(jsonPath("$.status").value("UP"))
                 .andExpect(jsonPath("$.aiProvider").value("NVIDIA"))
                 .andExpect(jsonPath("$.llmConfigured").value(true))
-                .andExpect(jsonPath("$.llmModel").value("meta/llama-3.1-8b-instruct"))
+                .andExpect(jsonPath("$.llmModel").value("nvidia/nemotron-3-super-120b-a12b"))
                 .andExpect(jsonPath("$.embeddingConfigured").value(true))
-                .andExpect(jsonPath("$.embeddingModel").value("nvidia/nemotron-3-embed-1b"))
+                .andExpect(jsonPath("$.embeddingModel").value("nvidia/llama-nemotron-embed-vl-1b-v2"))
                 .andExpect(jsonPath("$.embeddingDimension").value(2048));
     }
 }
