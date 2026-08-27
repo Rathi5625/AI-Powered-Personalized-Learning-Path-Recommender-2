@@ -2,6 +2,7 @@ package com.learningpath.repository;
 
 import com.learningpath.entity.Course;
 import com.learningpath.entity.CourseLevel;
+import com.learningpath.entity.ResourceType;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,16 @@ public interface CourseRepository extends JpaRepository<Course, UUID>, JpaSpecif
     boolean existsByExternalId(String externalId);
 
     Optional<Course> findByExternalId(String externalId);
+
+    /** Secondary duplicate guard: used when externalId is null or as a fallback. */
+    Optional<Course> findByTitleIgnoreCaseAndResourceType(String title, ResourceType resourceType);
+
+    /** Count query for post-import verification report. */
+    long countByResourceType(ResourceType resourceType);
+
+    /** Count rows that have no embedding (null content_embedding). */
+    @Query("SELECT COUNT(c) FROM Course c WHERE c.contentEmbedding IS NULL")
+    long countWithNullEmbedding();
 
     @Query(value = """
         SELECT * FROM courses c
