@@ -39,12 +39,12 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
             @Value("${app.llm.base-url}") String baseUrl,
             @Value("${app.llm.api-key}") String apiKey,
             @Value("${app.llm.model}") String model,
-            @Value("${app.llm.timeout-seconds:15}") int timeoutSeconds,
+            @Value("${app.llm.timeout-seconds:45}") int timeoutSeconds,
             ObjectMapper objectMapper
     ) {
         this.apiKey = apiKey;
         this.model = model;
-        this.timeout = Duration.ofSeconds(timeoutSeconds);
+        this.timeout = Duration.ofSeconds(timeoutSeconds > 0 ? timeoutSeconds : 45);
         this.objectMapper = objectMapper;
         this.webClient = webClientBuilder
                 .baseUrl(baseUrl)
@@ -209,6 +209,8 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
         Map<String, Object> requestBody = new HashMap<>();
         requestBody.put("model", model);
         requestBody.put("temperature", 0.3);
+        requestBody.put("top_p", 0.95);
+        requestBody.put("max_tokens", jsonMode ? 1000 : 800);
 
         List<Map<String, String>> messages = List.of(
                 Map.of("role", "system", "content", systemPrompt),
@@ -220,7 +222,7 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
             requestBody.put("response_format", Map.of("type", "json_object"));
         }
 
-        log.debug("Sending chat completion request to model: {}", model);
+        log.debug("Sending chat completion request to model: {} (max_tokens={})", model, jsonMode ? 1000 : 800);
 
         try {
             String response = webClient.post()
@@ -252,7 +254,7 @@ public class OpenAiCompatibleLlmClient implements LlmClient {
                                     }))
                     .bodyToMono(String.class)
                     .timeout(timeout)
-                    .retryWhen(Retry.backoff(2, Duration.ofMillis(500))
+                    .retryWhen(Retry.backoff(1, Duration.ofSeconds(1))
                             .filter(throwable -> !(throwable instanceof WebClientResponseException wcre && wcre.getStatusCode().is4xxClientError())))
                     .block();
 
