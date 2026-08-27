@@ -76,7 +76,9 @@ export default function CoursesPage() {
         <div>
           <Eyebrow>Knowledge repository</Eyebrow>
           <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.055em] text-text sm:text-5xl">Curriculum Catalog</h1>
-          <p className="mt-2 text-sm text-muted">Explore 792 curated courses, modules, and YouTube lectures</p>
+          <p className="mt-2 text-sm text-muted">
+            Explore {catalogData?.totalElements !== undefined ? `${catalogData.totalElements} curated` : 'curated'} courses, modules, and YouTube lectures
+          </p>
         </div>
 
         <form onSubmit={handleSearchSubmit} className="relative w-full lg:max-w-sm">
