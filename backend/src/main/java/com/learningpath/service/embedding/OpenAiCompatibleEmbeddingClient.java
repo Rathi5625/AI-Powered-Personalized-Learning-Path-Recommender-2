@@ -45,12 +45,11 @@ public class OpenAiCompatibleEmbeddingClient implements EmbeddingClient {
             @Value("${app.embedding.model:nvidia/nemotron-3-embed-1b}") String model,
             @Value("${app.embedding.timeout-seconds:15}") int timeoutSeconds,
             @Value("${app.embedding.dimension:2048}") int dimension,
-            ObjectMapper objectMapper
-    ) {
+            ObjectMapper objectMapper) {
         this.baseUrl = baseUrl;
         this.apiKey = apiKey != null ? apiKey.trim() : "";
         this.model = model != null ? model.trim() : "nvidia/nemotron-3-embed-1b";
-        this.timeout = Duration.ofSeconds(timeoutSeconds > 0 ? timeoutSeconds : 15);
+        this.timeout = Duration.ofSeconds(timeoutSeconds > 0 ? timeoutSeconds : 45);
         this.dimension = dimension > 0 ? dimension : 2048;
         this.objectMapper = objectMapper;
         this.webClient = webClientBuilder
@@ -112,13 +111,15 @@ public class OpenAiCompatibleEmbeddingClient implements EmbeddingClient {
         requestBody.put("model", model);
         requestBody.put("input", texts);
 
-        // NVIDIA NIM and modern embedding models support input_type ('query' vs 'passage')
+        // NVIDIA NIM and modern embedding models support input_type ('query' vs
+        // 'passage')
         String effectiveInputType = (inputType != null && !inputType.isBlank())
                 ? inputType.trim().toLowerCase()
                 : DEFAULT_QUERY_INPUT_TYPE;
         requestBody.put("input_type", effectiveInputType);
 
-        log.debug("Dispatching embeddings request: model={}, count={}, input_type={}", model, texts.size(), effectiveInputType);
+        log.debug("Dispatching embeddings request: model={}, count={}, input_type={}", model, texts.size(),
+                effectiveInputType);
 
         try {
             String response = webClient.post()
@@ -151,10 +152,12 @@ public class OpenAiCompatibleEmbeddingClient implements EmbeddingClient {
         } catch (Exception e) {
             if (e.getCause() instanceof TimeoutException || e instanceof java.util.concurrent.TimeoutException) {
                 log.error("Embedding request timed out after {}s", timeout.toSeconds());
-                throw new ExternalServiceException("Embedding service request timed out after " + timeout.toSeconds() + " seconds.", e, 504);
+                throw new ExternalServiceException(
+                        "Embedding service request timed out after " + timeout.toSeconds() + " seconds.", e, 504);
             }
             log.error("Failed to communicate with embedding service: {}", e.getMessage());
-            throw new ExternalServiceException("Failed to communicate with embedding service: " + e.getMessage(), e, 502);
+            throw new ExternalServiceException("Failed to communicate with embedding service: " + e.getMessage(), e,
+                    502);
         }
     }
 
@@ -167,14 +170,16 @@ public class OpenAiCompatibleEmbeddingClient implements EmbeddingClient {
             JsonNode root = objectMapper.readTree(responseJson);
             JsonNode dataArray = root.path("data");
             if (!dataArray.isArray() || dataArray.isEmpty()) {
-                throw new ExternalServiceException("Malformed response from embedding service: Missing 'data' array.", 502);
+                throw new ExternalServiceException("Malformed response from embedding service: Missing 'data' array.",
+                        502);
             }
 
             List<float[]> result = new ArrayList<>();
             for (JsonNode item : dataArray) {
                 JsonNode embeddingNode = item.path("embedding");
                 if (!embeddingNode.isArray()) {
-                    throw new ExternalServiceException("Malformed response from embedding service: Item missing 'embedding' array.", 502);
+                    throw new ExternalServiceException(
+                            "Malformed response from embedding service: Item missing 'embedding' array.", 502);
                 }
 
                 int srcSize = embeddingNode.size();
@@ -217,8 +222,10 @@ public class OpenAiCompatibleEmbeddingClient implements EmbeddingClient {
                     "Embedding model or endpoint not found (HTTP 404 Not Found) for model: '" + model + "'.",
                     e, 404);
             case 410 -> throw new ExternalServiceException(
-                    "The configured NVIDIA embedding model '" + model + "' is no longer available (HTTP 410 Gone / Deprecated). " +
-                            "Please configure an active model such as nvidia/nemotron-3-embed-1b via EMBEDDING_MODEL. " +
+                    "The configured NVIDIA embedding model '" + model
+                            + "' is no longer available (HTTP 410 Gone / Deprecated). " +
+                            "Please configure an active model such as nvidia/nemotron-3-embed-1b via EMBEDDING_MODEL. "
+                            +
                             "Provider detail: " + detailMessage,
                     e, 410);
             case 429 -> throw new ExternalServiceException(
@@ -253,7 +260,8 @@ public class OpenAiCompatibleEmbeddingClient implements EmbeddingClient {
             if (node.has("error") && node.get("error").hasNonNull("message")) {
                 return node.get("error").get("message").asText();
             }
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+        }
         return body.length() > 200 ? body.substring(0, 200) + "..." : body;
     }
 
@@ -269,11 +277,13 @@ public class OpenAiCompatibleEmbeddingClient implements EmbeddingClient {
 
     @Override
     public boolean isConfigured() {
-        return !apiKey.isBlank() && !"mock-key".equalsIgnoreCase(apiKey) && !"nvapi-your_nvidia_api_key".equalsIgnoreCase(apiKey);
+        return !apiKey.isBlank() && !"mock-key".equalsIgnoreCase(apiKey)
+                && !"nvapi-your_nvidia_api_key".equalsIgnoreCase(apiKey);
     }
 
     /**
-     * Generates a deterministic unit-normalized pseudo-embedding for local dev/testing without external API keys.
+     * Generates a deterministic unit-normalized pseudo-embedding for local
+     * dev/testing without external API keys.
      */
     public static float[] generateDeterministicEmbedding(String text, int dim) {
         float[] vector = new float[dim];
