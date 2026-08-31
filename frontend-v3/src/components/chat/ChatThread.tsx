@@ -1,6 +1,7 @@
 import { useEffect, useRef, type KeyboardEvent } from 'react';
 import { CornerDownLeft, Loader2, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/cn';
+import { MarkdownContent } from './MarkdownContent';
 
 export interface ChatTurn {
   id: string;
@@ -50,9 +51,9 @@ function ChatBubble({ turn }: { turn: ChatTurn }) {
       )}
       <div
         className={cn(
-          'max-w-[82%] whitespace-pre-wrap rounded-card px-4 py-3 text-sm leading-relaxed shadow-card-soft',
+          'max-w-[85%] rounded-card px-4 py-3 text-sm leading-relaxed shadow-card-soft',
           isUser
-            ? 'bg-ion text-white'
+            ? 'whitespace-pre-wrap bg-ion text-white'
             : 'border border-line bg-surface-alt text-text',
         )}
       >
@@ -61,8 +62,10 @@ function ChatBubble({ turn }: { turn: ChatTurn }) {
             <Loader2 className="h-3.5 w-3.5 animate-spin text-ion" aria-hidden />
             Thinking…
           </span>
-        ) : (
+        ) : isUser ? (
           turn.text
+        ) : (
+          <MarkdownContent content={turn.text} />
         )}
       </div>
     </div>

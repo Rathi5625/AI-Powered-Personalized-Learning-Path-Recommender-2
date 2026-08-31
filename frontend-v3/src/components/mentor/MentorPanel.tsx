@@ -6,6 +6,7 @@ import { uid } from '@/lib/uid';
 import { getApiErrorMessage } from '@/lib/apiClient';
 import { useMentorStore } from '@/store/useMentorStore';
 import { useSendMentorMessage } from '@/hooks/api/useMentor';
+import { MarkdownContent } from '@/components/chat';
 import type { MentorContextType } from '@/types';
 
 const CONTEXT_LABEL: Record<MentorContextType, string> = {
@@ -166,9 +167,9 @@ export function MentorPanel() {
                     )}
                     <div
                       className={cn(
-                        'max-w-[85%] whitespace-pre-wrap rounded-card px-3.5 py-2.5 text-sm leading-relaxed shadow-card-soft',
+                        'max-w-[85%] rounded-card px-3.5 py-2.5 text-sm leading-relaxed shadow-card-soft',
                         m.role === 'user'
-                          ? 'bg-ion text-white'
+                          ? 'whitespace-pre-wrap bg-ion text-white'
                           : 'border border-line bg-surface-alt text-text',
                       )}
                     >
@@ -177,8 +178,10 @@ export function MentorPanel() {
                           <Loader2 className="h-3.5 w-3.5 animate-spin text-ion" aria-hidden />
                           Thinking…
                         </span>
-                      ) : (
+                      ) : m.role === 'user' ? (
                         m.text
+                      ) : (
+                        <MarkdownContent content={m.text} />
                       )}
                     </div>
                   </div>
